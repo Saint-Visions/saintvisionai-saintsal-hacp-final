@@ -142,7 +142,25 @@ export default function Index() {
                   <Link to="/console">
                     <Button
                       variant="outline"
-                      className="w-full border-blue-500 text-blue-400 hover:bg-blue-500/10 bg-blue-900/50"
+                      className="w-full"
+                      style={{
+                        border: "1px solid #FFD700",
+                        background: "transparent",
+                        color: "#FFD700",
+                        fontFamily: "Inter, sans-serif",
+                        borderRadius: "12px",
+                        transition: "all 0.3s ease",
+                      }}
+                      onMouseEnter={(e) => {
+                        e.currentTarget.style.background =
+                          "rgba(255,215,0,0.1)";
+                        e.currentTarget.style.boxShadow =
+                          "0 0 15px rgba(255,215,0,0.3)";
+                      }}
+                      onMouseLeave={(e) => {
+                        e.currentTarget.style.background = "transparent";
+                        e.currentTarget.style.boxShadow = "none";
+                      }}
                     >
                       💬 AI Chat
                     </Button>
@@ -150,7 +168,25 @@ export default function Index() {
                   <Link to="/login">
                     <Button
                       variant="outline"
-                      className="w-full border-green-500 text-green-400 hover:bg-green-500/10 bg-green-900/50"
+                      className="w-full"
+                      style={{
+                        border: "1px solid #FFD700",
+                        background: "transparent",
+                        color: "#FFD700",
+                        fontFamily: "Inter, sans-serif",
+                        borderRadius: "12px",
+                        transition: "all 0.3s ease",
+                      }}
+                      onMouseEnter={(e) => {
+                        e.currentTarget.style.background =
+                          "rgba(255,215,0,0.1)";
+                        e.currentTarget.style.boxShadow =
+                          "0 0 15px rgba(255,215,0,0.3)";
+                      }}
+                      onMouseLeave={(e) => {
+                        e.currentTarget.style.background = "transparent";
+                        e.currentTarget.style.boxShadow = "none";
+                      }}
                     >
                       📱 Sign In
                     </Button>
