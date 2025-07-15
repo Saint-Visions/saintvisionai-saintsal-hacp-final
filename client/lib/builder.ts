@@ -1,4 +1,4 @@
-import { builder } from "@builder.io/sdk";
+import { builder } from "@builder.io/react";
 
 // SaintSal Builder.io Configuration
 export const BUILDER_API_KEY =
