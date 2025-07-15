@@ -123,7 +123,15 @@ export default function Login() {
           </Link>
 
           {/* Main Card */}
-          <Card className="bg-black/80 backdrop-blur-sm border-amber-400/30">
+          <Card
+            className="bg-black/70 backdrop-blur-sm border text-center"
+            style={{
+              borderColor: "rgba(255,215,0,0.4)",
+              boxShadow:
+                "0 0 30px rgba(255,215,0,0.3), 0 0 60px rgba(255,215,0,0.1), inset 0 1px 0 rgba(255,215,0,0.2)",
+              transition: "all 0.3s ease",
+            }}
+          >
             <CardHeader className="text-center space-y-4">
               <div className="flex items-center justify-center">
                 <img
