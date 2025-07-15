@@ -5,10 +5,6 @@ import { SaintSalCTA } from "./SaintSalCTA";
 import { SaintSalStats } from "./SaintSalStats";
 import { SaintSalTestimonial } from "./SaintSalTestimonial";
 
-// Initialize Builder with API key
-import { BUILDER_API_KEY } from "@/lib/builder";
-Builder.init(BUILDER_API_KEY);
-
 // Register SaintSal Hero Component
 Builder.registerComponent(SaintSalHero, {
   name: "SaintSal Hero",
