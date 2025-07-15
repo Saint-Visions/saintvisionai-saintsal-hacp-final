@@ -181,8 +181,7 @@ export default function Index() {
                 <span
                   style={{
                     color: "#00D9FF",
-                    textShadow:
-                      "0 0 12px rgba(0,217,255,1), 0 0 24px rgba(0,217,255,0.7), 0 0 48px rgba(0,217,255,0.3)",
+                    textShadow: "0 0 4px rgba(0,217,255,0.5)",
                   }}
                 >
                   Smarter Than ChatGPT
@@ -193,8 +192,7 @@ export default function Index() {
                 <span
                   style={{
                     color: "#FF6B6B",
-                    textShadow:
-                      "0 0 12px rgba(255,107,107,1), 0 0 24px rgba(255,107,107,0.7), 0 0 48px rgba(255,107,107,0.3)",
+                    textShadow: "0 0 4px rgba(255,107,107,0.5)",
                   }}
                 >
                   Gets Work Done
