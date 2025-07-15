@@ -92,7 +92,7 @@ export default function Index() {
             Chat with AI. Take action instantly. Stay in control.
           </p>
 
-                              {/* Primary CTA */}
+          {/* Primary CTA */}
           <div className="relative">
             <a href="https://saintvisionai.com/signup">
               <Button
@@ -122,7 +122,7 @@ export default function Index() {
               >
                 → Start Using SaintSal™
               </Button>
-            </Link>
+            </a>
           </div>
         </section>
 
