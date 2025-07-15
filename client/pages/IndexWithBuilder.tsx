@@ -10,9 +10,14 @@ export default function IndexWithBuilder() {
   const isPreviewingInBuilder = useIsPreviewing();
   const [builderContent, setBuilderContent] = useState(null);
   const [showBuilder, setShowBuilder] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     async function fetchBuilderContent() {
+      console.log("🔍 Fetching Builder.io content...");
+      console.log("🔑 API Key:", BUILDER_API_KEY);
+      console.log("🎯 Preview mode:", isPreviewingInBuilder);
+
       try {
         const content = await builder
           .get("page", {
@@ -23,20 +28,57 @@ export default function IndexWithBuilder() {
           })
           .toPromise();
 
+        console.log("📦 Builder content received:", content);
+
         if (content) {
+          console.log("✅ Builder content found - showing Builder version");
           setBuilderContent(content);
           setShowBuilder(true);
+        } else {
+          console.log("❌ No Builder content found - showing fallback");
         }
       } catch (error) {
-        console.error("Error fetching Builder.io content:", error);
+        console.error("🚨 Error fetching Builder.io content:", error);
+      } finally {
+        setLoading(false);
       }
     }
 
     fetchBuilderContent();
   }, [isPreviewingInBuilder]);
 
+  // Show loading state
+  if (loading) {
+    return (
+      <div
+        className="min-h-screen flex items-center justify-center"
+        style={{ backgroundColor: "#10161C" }}
+      >
+        <div className="text-center">
+          <div
+            className="w-12 h-12 border-4 border-t-4 rounded-full animate-spin mx-auto mb-4"
+            style={{
+              borderColor: "rgba(255, 215, 0, 0.3)",
+              borderTopColor: "#FFD700",
+            }}
+          />
+          <p
+            className="text-lg"
+            style={{
+              fontFamily: "Inter, sans-serif",
+              color: "rgba(255,255,255,0.7)",
+            }}
+          >
+            Loading SaintSal content...
+          </p>
+        </div>
+      </div>
+    );
+  }
+
   // If Builder.io content exists or we're in preview mode, show Builder content
   if (showBuilder || isPreviewingInBuilder) {
+    console.log("🎨 Rendering Builder.io content");
     return (
       <div style={{ backgroundColor: "#10161C", minHeight: "100vh" }}>
         <BuilderComponent
@@ -49,6 +91,7 @@ export default function IndexWithBuilder() {
   }
 
   // Fallback to original homepage design
+  console.log("🏠 Rendering fallback homepage");
   return (
     <div
       className="min-h-screen relative overflow-hidden"
@@ -129,7 +172,7 @@ export default function IndexWithBuilder() {
           </p>
 
           <p
-            className="text-lg md:text-xl mb-16 text-center max-w-2xl"
+            className="text-lg md:text-xl mb-8 text-center max-w-2xl"
             style={{
               fontFamily: "Inter, sans-serif",
               color: "rgba(255,255,255,0.7)",
@@ -138,6 +181,31 @@ export default function IndexWithBuilder() {
           >
             Chat with AI. Take action instantly. Stay in control.
           </p>
+
+          {/* Debug Info */}
+          <div
+            className="mb-8 p-4 rounded-lg text-center"
+            style={{
+              background: "rgba(255, 215, 0, 0.1)",
+              border: "1px solid rgba(255, 215, 0, 0.3)",
+            }}
+          >
+            <p
+              className="text-sm"
+              style={{
+                color: "#FFD700",
+                fontFamily: "Inter, sans-serif",
+              }}
+            >
+              🎯 <strong>Builder.io Status:</strong> No content found at path
+              "/"
+              <br />
+              💡 <strong>Next Step:</strong> Create a page with URL path "/" in
+              Builder.io
+              <br />
+              🔑 <strong>API Key:</strong> {BUILDER_API_KEY.substring(0, 10)}...
+            </p>
+          </div>
 
           {/* Primary CTA */}
           <div className="relative">
