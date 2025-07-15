@@ -255,8 +255,8 @@ export default function Index() {
                     style={{
                       fontFamily: "Inter, sans-serif",
                       color: feature.color,
-                      fontWeight: "800",
-                      textShadow: `0 0 12px rgba(${feature.glow},1), 0 0 24px rgba(${feature.glow},0.6), 0 0 36px rgba(${feature.glow},0.3)`,
+                      fontWeight: "700",
+                      textShadow: `0 0 4px rgba(${feature.glow},0.4)`,
                       textTransform: "uppercase",
                       letterSpacing: "0.05em",
                     }}
