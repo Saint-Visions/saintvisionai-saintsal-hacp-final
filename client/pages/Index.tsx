@@ -19,7 +19,7 @@ export default function Index() {
       className="min-h-screen relative overflow-hidden"
       style={{
         backgroundColor: "#10161C",
-        backgroundImage: `url('https://cdn.builder.io/api/v1/image/assets%2Fd83998c6a81f466db4fb83ab90c7ba25%2F7d4d645a636d471a8c748e4565e96c6a?format=webp&width=800')`,
+        backgroundImage: `url('https://cdn.builder.io/api/v1/image/assets%2Fd83998c6a81f466db4fb83ab90c7ba25%2F179a1108a9c7482b829b68cf4cc7f89f')`,
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center center",
         backgroundSize: "cover",
