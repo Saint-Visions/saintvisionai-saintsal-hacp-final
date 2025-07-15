@@ -211,19 +211,24 @@ export class ConversationService {
 
       // Handle different AI models
       if (conversation.ai_model === "dual") {
-        const responses = await aiService.sendDualMessage(chatMessages);
-        // For now, use Azure response as primary, could implement dual UI later
-        aiResponse = responses.azure;
+        // For dual mode, use companion model (Azure-powered)
+        aiResponse = await aiService.sendMessage(chatMessages, "companion");
       } else if (onStreamChunk) {
         aiResponse = await aiService.streamMessage(
           chatMessages,
-          conversation.ai_model as "azure-gpt-4o" | "gpt-4o",
+          conversation.ai_model as
+            | "companion"
+            | "saintsal-4o"
+            | "saintsal-turbo",
           onStreamChunk,
         );
       } else {
         aiResponse = await aiService.sendMessage(
           chatMessages,
-          conversation.ai_model as "azure-gpt-4o" | "gpt-4o",
+          conversation.ai_model as
+            | "companion"
+            | "saintsal-4o"
+            | "saintsal-turbo",
         );
       }
 
