@@ -138,10 +138,11 @@ export default function Index() {
                 fontWeight: "800",
               }}
             >
-              Most AIs <span style={{ color: "#FFFFFF" }}>talk</span>.
+              Most AI assistants just{" "}
+              <span style={{ color: "#FFFFFF" }}>chat</span>.
               <br />
               <span style={{ color: "#FFD700" }}>
-                SaintSal builds, routes, and runs it
+                SaintSal actually executes your requests
               </span>
               .
             </h2>
@@ -156,7 +157,7 @@ export default function Index() {
                   lineHeight: "1.4",
                 }}
               >
-                You don't need training.
+                No complex setup required.
               </p>
               <p
                 className="text-xl md:text-2xl"
@@ -167,7 +168,7 @@ export default function Index() {
                   lineHeight: "1.4",
                 }}
               >
-                You don't need instructions.
+                No manual workflows to learn.
               </p>
               <p
                 className="text-xl md:text-2xl"
@@ -178,7 +179,7 @@ export default function Index() {
                   lineHeight: "1.4",
                 }}
               >
-                Just start typing. It'll get it done.
+                Ask for something. Watch it happen.
               </p>
             </div>
           </div>
