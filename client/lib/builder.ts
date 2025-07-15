@@ -1,4 +1,4 @@
-import { builder } from "@builder.io/react";
+import { builder } from "@builder.io/sdk";
 
 // SaintSal Builder.io Configuration
 export const BUILDER_API_KEY =
@@ -6,20 +6,6 @@ export const BUILDER_API_KEY =
 
 // Initialize Builder.io
 builder.init(BUILDER_API_KEY);
-
-// Configure Builder.io settings for SaintSal
-builder.set("previewUrl", window.location.origin);
-builder.set("liveSync", true);
-
-// Configure Builder.io settings
-builder.set({
-  // Enable real-time visual editing
-  prerender: false,
-  // Cache content for performance
-  cacheSeconds: 300,
-  // Enable custom fields in the editor
-  includeRefs: true,
-});
 
 // SaintSal Brand Theme for Builder.io
 export const saintSalTheme = {
