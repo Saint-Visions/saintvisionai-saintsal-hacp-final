@@ -257,7 +257,9 @@ export default function Console() {
   };
 
   return (
-    <div className="min-h-screen bg-background flex">
+    <div className="min-h-screen bg-background flex golden-dust-settle">
+      {/* Golden Atmosphere - Medium Intensity for Workspace */}
+      <GoldenAtmosphere intensity="medium" />
       <Sidebar />
       <div className="flex-1 flex flex-col">
         {/* Header */}
