@@ -4,9 +4,7 @@ logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
+pnpm-debug.log*
 lerna-debug.log*
 
 # Diagnostic reports (https://nodejs.org/api/report.html)
@@ -84,6 +82,7 @@ out
 # Nuxt.js build / generate output
 .nuxt
 dist
+dist-ssr
 
 # Gatsby files
 .cache/
@@ -140,15 +139,6 @@ dist
 # Vite logs files
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
-=======
->>>>>>> f809012
-pnpm-debug.log*
-lerna-debug.log*
-
-node_modules
-dist
-dist-ssr
-*.local
 
 # Editor directories and files
 .vscode/*
@@ -160,13 +150,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+*.local
 
 .config/
-<<<<<<< HEAD
-.env
-.env
-=======
->>>>>>> 0ae6ea3 (🚀 SaintVision AI Platform – GOTTA GUY Design – Production Ready)
-.env
 .vercel
->>>>>>> f809012
