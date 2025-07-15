@@ -26,30 +26,47 @@ export default function Index() {
         backgroundAttachment: "fixed",
       }}
     >
-      {/* Subtle Facility Atmosphere */}
+      {/* Premium High-Level Atmosphere */}
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
-          background:
-            "linear-gradient(180deg, rgba(16,22,28,0.2) 0%, rgba(0,0,0,0.4) 50%, rgba(16,22,28,0.6) 100%)",
+          background: `
+            radial-gradient(ellipse at 20% 30%, rgba(255,215,0,0.15) 0%, transparent 70%),
+            radial-gradient(ellipse at 80% 70%, rgba(255,215,0,0.12) 0%, transparent 70%),
+            linear-gradient(135deg, rgba(16,22,28,0.3) 0%, rgba(0,0,0,0.6) 50%, rgba(16,22,28,0.4) 100%)
+          `,
         }}
       />
 
-      {/* Subtle Gold Dust Particles */}
+      {/* Enhanced Gold Particle System */}
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
           backgroundImage: `
-            radial-gradient(2px 2px at 20px 30px, rgba(255,215,0,0.08), transparent),
-            radial-gradient(1px 1px at 40px 70px, rgba(255,215,0,0.06), transparent),
-            radial-gradient(1px 1px at 90px 40px, rgba(255,215,0,0.04), transparent),
-            radial-gradient(2px 2px at 130px 80px, rgba(255,215,0,0.08), transparent),
-            radial-gradient(1px 1px at 160px 30px, rgba(255,215,0,0.03), transparent)
+            radial-gradient(3px 3px at 25px 35px, rgba(255,215,0,0.12), transparent),
+            radial-gradient(2px 2px at 45px 75px, rgba(255,215,0,0.10), transparent),
+            radial-gradient(1px 1px at 95px 45px, rgba(255,215,0,0.08), transparent),
+            radial-gradient(3px 3px at 135px 85px, rgba(255,215,0,0.12), transparent),
+            radial-gradient(2px 2px at 165px 35px, rgba(255,215,0,0.06), transparent),
+            radial-gradient(1px 1px at 200px 120px, rgba(255,215,0,0.08), transparent)
           `,
           backgroundRepeat: "repeat",
-          backgroundSize: "200px 100px",
-          animation: "goldDustFloat 20s ease-in-out infinite",
-          opacity: 0.5,
+          backgroundSize: "250px 150px",
+          animation: "goldDustFloat 25s ease-in-out infinite",
+          opacity: 0.7,
+        }}
+      />
+
+      {/* Premium Glow Layer */}
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          background: `
+            radial-gradient(circle at 50% 20%, rgba(255,215,0,0.08) 0%, transparent 50%),
+            radial-gradient(circle at 20% 80%, rgba(255,215,0,0.06) 0%, transparent 50%),
+            radial-gradient(circle at 80% 60%, rgba(255,215,0,0.04) 0%, transparent 50%)
+          `,
+          animation: "pulse 8s ease-in-out infinite",
         }}
       />
 
