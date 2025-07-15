@@ -4,9 +4,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { AuthProvider } from "./contexts/AuthContext";
 import ProtectedRoute from "./components/ProtectedRoute";
 
-// Initialize Builder.io
-import { builder } from "@builder.io/react";
-import { BUILDER_API_KEY } from "./lib/builder";
+// Initialize Builder.io (this import triggers the initialization)
+import "./lib/builder";
 
 // Pages
 import Index from "./pages/Index";
@@ -22,9 +21,6 @@ import Privacy from "./pages/Privacy";
 import Terms from "./pages/Terms";
 import NotFound from "./pages/NotFound";
 import BuilderPage from "./components/BuilderPage";
-
-// Initialize Builder.io
-builder.init(BUILDER_API_KEY);
 
 const App = () => (
   <AuthProvider>
