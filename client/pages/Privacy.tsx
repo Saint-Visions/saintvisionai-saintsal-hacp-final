@@ -295,8 +295,16 @@ export default function Privacy() {
         {/* Footer */}
         <div className="mt-12 text-center text-sm text-muted-foreground">
           <p>
-            © 2025 Saint Vision Group LLC. We protect your data. We respect
-            your time. We serve your purpose.
+            © 2025{" "}
+            <a
+              href="https://saintvisiongroup.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-primary hover:text-primary/80 transition-colors"
+            >
+              Saint Vision Group LLC
+            </a>
+            . We protect your data. We respect your time. We serve your purpose.
           </p>
           <div className="mt-4 space-x-4">
             <Link
