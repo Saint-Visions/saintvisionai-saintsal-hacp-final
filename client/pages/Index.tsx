@@ -12,10 +12,16 @@ export default function Index() {
         <div
           className="flex-1 flex items-center justify-center p-6"
           style={{
-            backgroundImage: `url('https://cdn.builder.io/api/v1/image/assets%2Fd83998c6a81f466db4fb83ab90c7ba25%2F8155e04eb6064174a0cb82e2eecf77b6')`,
+            backgroundImage: `
+              linear-gradient(135deg, rgba(16, 22, 28, 0.75) 0%, rgba(0, 0, 0, 0.4) 50%, rgba(16, 22, 28, 0.85) 100%),
+              radial-gradient(circle at 20% 80%, rgba(231, 176, 8, 0.05) 0%, transparent 50%),
+              radial-gradient(circle at 80% 20%, rgba(231, 176, 8, 0.03) 0%, transparent 50%),
+              url('https://cdn.builder.io/api/v1/image/assets%2Fd83998c6a81f466db4fb83ab90c7ba25%2F8155e04eb6064174a0cb82e2eecf77b6')
+            `,
             backgroundRepeat: "no-repeat",
             backgroundPosition: "center",
             backgroundSize: "cover",
+            backgroundAttachment: "fixed",
           }}
         >
           <div className="max-w-md w-full space-y-6">
