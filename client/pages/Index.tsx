@@ -174,7 +174,7 @@ export default function Index() {
                   fontFamily: "Cinzel Decorative, serif",
                   color: "#FFD700",
                   textShadow:
-                    "0 0 8px rgba(255,215,0,0.8), 0 0 16px rgba(255,215,0,0.6), 0 0 32px rgba(255,215,0,0.4)",
+                    "0 0 4px rgba(255,215,0,0.5), 0 0 8px rgba(255,215,0,0.3), 0 0 16px rgba(255,215,0,0.2)",
                   letterSpacing: "-0.01em",
                 }}
               >
