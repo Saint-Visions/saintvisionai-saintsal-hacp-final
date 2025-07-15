@@ -39,7 +39,7 @@ export default function Index() {
             </div>
 
             {/* Logo and Branding */}
-            <div className="bg-black/80 backdrop-blur-sm rounded-2xl p-6 border border-yellow-400/30 text-center space-y-4">
+            <div className="bg-black/70 backdrop-blur-sm rounded-2xl p-6 border border-yellow-400/30 text-center space-y-4">
               <div className="flex items-center justify-center">
                 <img
                   src="https://cdn.builder.io/api/v1/image/assets/TEMP/23b227793103accd33c7649ebabb0572cddb55c1?width=2048"
