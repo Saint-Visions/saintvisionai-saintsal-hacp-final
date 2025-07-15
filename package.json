@@ -14,7 +14,12 @@
     "deploy": "vercel --prod"
   },
   "dependencies": {
+<<<<<<< HEAD
     "@builder.io/sdk-react": "^4.2.3",
+=======
+    "@builder.io/react": "^8.2.6",
+    "@builder.io/sdk": "^6.1.2",
+>>>>>>> origin/main
     "@radix-ui/react-switch": "^1.2.5",
     "@stripe/stripe-js": "^4.8.0",
     "@supabase/supabase-js": "^2.51.0",

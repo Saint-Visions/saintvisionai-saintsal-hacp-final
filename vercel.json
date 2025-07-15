@@ -1,7 +1,7 @@
 {
-  "version": 2,
   "buildCommand": "vite build",
   "outputDirectory": "dist/spa",
+<<<<<<< HEAD
   "installCommand": "npm install",
   "routes": [
     {
@@ -13,4 +13,7 @@
       "dest": "/index.html"
     }
   ]
+=======
+  "installCommand": "npm install"
+>>>>>>> origin/main
 }
