@@ -3,11 +3,11 @@ import { BUILDER_API_KEY } from "../../lib/builder";
 import { SaintSalHero } from "./SaintSalHero";
 import { SaintSalFeatures } from "./SaintSalFeatures";
 import { SaintSalCTA } from "./SaintSalCTA";
-import { SaintSalStats } from "./SaintSalStats";
+import SaintSalStats from "./SaintSalStats";
 import { SaintSalTestimonial } from "./SaintSalTestimonial";
 
-// Initialize Builder with API key
-Builder.init(BUILDER_API_KEY);
+// The Builder React SDK does not require explicit initialization with an API key.
+// Make sure BUILDER_API_KEY is set in your environment and used in your Builder components/pages.
 
 // Register SaintSal Hero Component
 Builder.registerComponent(SaintSalHero, {
@@ -17,9 +17,6 @@ Builder.registerComponent(SaintSalHero, {
       name: "title",
       type: "string",
       defaultValue: "Your AI Companion for Real Work",
-    },
-  ],
-});
       helperText:
         "Main hero title - last two words will be highlighted in gold",
     },
@@ -78,8 +75,8 @@ Builder.registerComponent(SaintSalHero, {
   ],
 });
 
-// Register SaintSal Features Component
-builder.registerComponent(SaintSalFeatures, {
+// Register remaining components
+Builder.registerComponent(SaintSalFeatures, {
   name: "SaintSal Features",
   inputs: [
     {
@@ -130,8 +127,7 @@ builder.registerComponent(SaintSalFeatures, {
   ],
 });
 
-// Register SaintSal CTA Component
-builder.registerComponent(SaintSalCTA, {
+Builder.registerComponent(SaintSalCTA, {
   name: "SaintSal CTA",
   inputs: [
     {
@@ -167,8 +163,7 @@ builder.registerComponent(SaintSalCTA, {
   ],
 });
 
-// Register SaintSal Stats Component
-builder.registerComponent(SaintSalStats, {
+Builder.registerComponent(SaintSalStats, {
   name: "SaintSal Stats",
   inputs: [
     {
@@ -181,21 +176,9 @@ builder.registerComponent(SaintSalStats, {
       name: "stats",
       type: "list",
       subFields: [
-        {
-          name: "value",
-          type: "string",
-          defaultValue: "99%",
-        },
-        {
-          name: "label",
-          type: "string",
-          defaultValue: "Stat Label",
-        },
-        {
-          name: "description",
-          type: "string",
-          defaultValue: "Stat description",
-        },
+        { name: "value", type: "string", defaultValue: "99%" },
+        { name: "label", type: "string", defaultValue: "Stat Label" },
+        { name: "description", type: "string", defaultValue: "Stat description" },
       ],
       defaultValue: [
         {
@@ -223,8 +206,7 @@ builder.registerComponent(SaintSalStats, {
   ],
 });
 
-// Register SaintSal Testimonial Component
-builder.registerComponent(SaintSalTestimonial, {
+Builder.registerComponent(SaintSalTestimonial, {
   name: "SaintSal Testimonials",
   inputs: [
     {
@@ -237,26 +219,10 @@ builder.registerComponent(SaintSalTestimonial, {
       name: "testimonials",
       type: "list",
       subFields: [
-        {
-          name: "quote",
-          type: "longText",
-          defaultValue: "Amazing testimonial text here.",
-        },
-        {
-          name: "author",
-          type: "string",
-          defaultValue: "John Doe",
-        },
-        {
-          name: "role",
-          type: "string",
-          defaultValue: "CEO",
-        },
-        {
-          name: "company",
-          type: "string",
-          defaultValue: "Company Name",
-        },
+        { name: "quote", type: "longText", defaultValue: "Amazing testimonial text here." },
+        { name: "author", type: "string", defaultValue: "John Doe" },
+        { name: "role", type: "string", defaultValue: "CEO" },
+        { name: "company", type: "string", defaultValue: "Company Name" },
       ],
       defaultValue: [
         {
@@ -285,8 +251,7 @@ builder.registerComponent(SaintSalTestimonial, {
   ],
 });
 
-// SaintSal Design Tokens for Builder.io Editor
-builder.register("editor.settings", {
+Builder.register("editor.settings", {
   designTokens: {
     colors: [
       { name: "SaintSal Gold", value: "#FFD700" },
@@ -321,4 +286,4 @@ builder.register("editor.settings", {
   },
 });
 
-export default builder;
+export default Builder;
