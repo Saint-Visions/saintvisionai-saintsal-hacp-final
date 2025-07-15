@@ -75,7 +75,15 @@ export default function Index() {
             </div>
 
             {/* Logo and Branding */}
-            <div className="bg-black/70 backdrop-blur-sm rounded-2xl p-6 border border-yellow-400/30 text-center space-y-4">
+            <div
+              className="bg-black/70 backdrop-blur-sm rounded-2xl p-6 border text-center space-y-4"
+              style={{
+                borderColor: "rgba(255,215,0,0.4)",
+                boxShadow:
+                  "0 0 30px rgba(255,215,0,0.3), 0 0 60px rgba(255,215,0,0.1), inset 0 1px 0 rgba(255,215,0,0.2)",
+                transition: "all 0.3s ease",
+              }}
+            >
               <div className="flex items-center justify-center">
                 <img
                   src="https://cdn.builder.io/api/v1/image/assets/TEMP/23b227793103accd33c7649ebabb0572cddb55c1?width=2048"
