@@ -1,15 +1,12 @@
 {
-<<<<<<< HEAD
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist/spa",
+  "installCommand": "npm install",
   "functions": {
     "api/**/*.ts": {
       "runtime": "@vercel/node"
     }
   },
-=======
-  "buildCommand": "npm run build",
-  "outputDirectory": "dist/spa",
-  "installCommand": "npm install",
->>>>>>> origin/main
   "rewrites": [
     {
       "source": "/api/(.*)",
