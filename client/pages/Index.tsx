@@ -6,11 +6,12 @@ import { Search, Users, BarChart3, Smartphone } from "lucide-react";
 export default function Index() {
   return (
     <div className="min-h-screen relative overflow-hidden">
-      {/* Optimized Background with Single Overlay */}
+      {/* Cohesive Sticky Background */}
       <div
-        className="absolute inset-0 bg-cover bg-center"
+        className="fixed inset-0 bg-cover bg-center bg-fixed"
         style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)), url('https://cdn.builder.io/api/v1/image/assets%2Fd83998c6a81f466db4fb83ab90c7ba25%2F903fb238899e411f81a3d696681c038e?format=webp&width=800')`,
+          backgroundImage: `linear-gradient(135deg, rgba(0, 0, 0, 0.85) 0%, rgba(16, 22, 28, 0.75) 50%, rgba(0, 0, 0, 0.90) 100%), url('https://cdn.builder.io/api/v1/image/assets%2Fd83998c6a81f466db4fb83ab90c7ba25%2F903fb238899e411f81a3d696681c038e?format=webp&width=800')`,
+          backgroundAttachment: "fixed",
         }}
       />
 
