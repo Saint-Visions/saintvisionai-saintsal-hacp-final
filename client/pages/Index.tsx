@@ -173,13 +173,31 @@ export default function Index() {
                 style={{
                   fontFamily: "Cinzel Decorative, serif",
                   color: "#FFD700",
-                  textShadow: "0 0 30px rgba(255,215,0,0.3)",
+                  textShadow:
+                    "0 0 8px rgba(255,215,0,0.8), 0 0 16px rgba(255,215,0,0.6), 0 0 32px rgba(255,215,0,0.4)",
                   letterSpacing: "-0.01em",
                 }}
               >
-                Smarter Than ChatGPT.
+                <span
+                  style={{
+                    textShadow:
+                      "0 0 12px rgba(255,215,0,1), 0 0 24px rgba(255,215,0,0.7), 0 0 48px rgba(255,215,0,0.3)",
+                  }}
+                >
+                  Smarter Than ChatGPT
+                </span>
+                .
                 <br />
-                Actually Gets Work Done.
+                Actually{" "}
+                <span
+                  style={{
+                    textShadow:
+                      "0 0 12px rgba(255,215,0,1), 0 0 24px rgba(255,215,0,0.7), 0 0 48px rgba(255,215,0,0.3)",
+                  }}
+                >
+                  Gets Work Done
+                </span>
+                .
               </h2>
             </div>
 
