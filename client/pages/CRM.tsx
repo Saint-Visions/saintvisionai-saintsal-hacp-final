@@ -17,7 +17,9 @@ import {
 
 export default function CRM() {
   return (
-    <div className="min-h-screen relative overflow-hidden charcoal-depth gold-particles">
+    <div className="min-h-screen relative overflow-hidden golden-workspace golden-dust-settle">
+      {/* Golden Atmosphere - Subtle for CRM */}
+      <GoldenAtmosphere intensity="subtle" />
       {/* Professional Background */}
       <div
         className="absolute inset-0"
