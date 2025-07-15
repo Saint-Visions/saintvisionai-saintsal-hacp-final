@@ -11,22 +11,22 @@ export const GoldenAtmosphere: React.FC<GoldenAtmosphereProps> = ({
 }) => {
   const intensityConfig = {
     subtle: {
-      particles: 8,
-      opacity: 0.25,
-      glowOpacity: 0.08,
-      animationDuration: "30s",
+      particles: 6,
+      opacity: 0.15,
+      glowOpacity: 0.03,
+      animationDuration: "35s",
     },
     medium: {
-      particles: 12,
-      opacity: 0.35,
-      glowOpacity: 0.12,
-      animationDuration: "25s",
+      particles: 9,
+      opacity: 0.22,
+      glowOpacity: 0.05,
+      animationDuration: "30s",
     },
     strong: {
-      particles: 16,
-      opacity: 0.45,
-      glowOpacity: 0.18,
-      animationDuration: "20s",
+      particles: 12,
+      opacity: 0.28,
+      glowOpacity: 0.08,
+      animationDuration: "25s",
     },
   };
 
