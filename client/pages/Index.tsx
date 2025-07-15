@@ -208,8 +208,8 @@ export default function Index() {
               .
             </h2>
 
-            <div className="relative inline-block">
-              <Link to="/console">
+                        <div className="relative inline-block">
+              <a href="https://saintvisionai.com/console">
                 <Button
                   className="text-xl px-12 py-6 font-semibold relative"
                   style={{
