@@ -93,6 +93,19 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       throw new Error("No response content received");
     }
 
+    // Log the successful AI response
+    await insertServerEvent({
+      name: "ai_response",
+      userId: userId || "anonymous",
+      details: {
+        model,
+        response_length: choice.message.content.length,
+        prompt_tokens: response.usage?.prompt_tokens,
+        completion_tokens: response.usage?.completion_tokens,
+        total_tokens: response.usage?.total_tokens,
+      },
+    });
+
     res.json({
       success: true,
       message: choice.message.content,
