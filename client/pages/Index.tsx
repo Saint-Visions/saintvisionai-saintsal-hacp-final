@@ -99,11 +99,22 @@ export default function Index() {
             style={{
               fontFamily: "Inter, sans-serif",
               color: "rgba(255,255,255,0.95)",
-              textShadow: "0 0 20px rgba(255,255,255,0.1)",
+              textShadow:
+                "0 0 8px rgba(255,255,255,0.4), 0 0 16px rgba(255,255,255,0.2), 0 0 24px rgba(255,255,255,0.1)",
               fontWeight: "300",
             }}
           >
-            Built for execution — not entertainment.
+            Built for{" "}
+            <span
+              style={{
+                color: "#FFD700",
+                textShadow:
+                  "0 0 12px rgba(255,215,0,0.8), 0 0 24px rgba(255,215,0,0.4)",
+              }}
+            >
+              execution
+            </span>{" "}
+            — not entertainment.
           </p>
 
           <p
