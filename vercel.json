@@ -1,9 +1,7 @@
 {
   "version": 2,
-<<<<<<< HEAD
-  "framework": "vite",
-  "buildCommand": "npm run build",
-  "outputDirectory": "dist/spa",
+  "buildCommand": "vite build",
+  "outputDirectory": "dist",
   "installCommand": "npm install",
   "rewrites": [
     {
@@ -15,33 +13,10 @@
       "destination": "/index.html"
     }
   ],
-=======
->>>>>>> f809012
   "functions": {
-    "server/api/chat.ts": {
-      "runtime": "nodejs18.x"
-    },
-    "server/api/health.ts": {
-      "runtime": "nodejs18.x"
-    },
-    "server/api/stripe.ts": {
+    "api/*.ts": {
       "runtime": "nodejs18.x"
     }
-<<<<<<< HEAD
   }
 }
-=======
-  },
-  "rewrites": [
-    {
-      "source": "/api/(.*)",
-      "destination": "/server/api/$1"
-    },
-    {
-      "source": "/((?!api/).*)",
-      "destination": "/index.html"
-    }
-  ]
-}
 
->>>>>>> f809012
