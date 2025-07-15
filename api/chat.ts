@@ -28,8 +28,14 @@ function getAzureOpenAI(): OpenAI {
 
 function getStandardOpenAI(): OpenAI {
   if (!standardOpenAI) {
+    const apiKey = process.env.OPENAI_API_KEY;
+
+    if (!apiKey) {
+      throw new Error("OpenAI API key missing");
+    }
+
     standardOpenAI = new OpenAI({
-      apiKey: process.env.OPENAI_API_KEY,
+      apiKey: apiKey,
     });
   }
   return standardOpenAI;
