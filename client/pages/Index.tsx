@@ -360,12 +360,42 @@ export default function Index() {
 
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-12">
               {[
-                { icon: Mail, text: "Create email drafts" },
-                { icon: BarChart3, text: "Move CRM pipeline stages" },
-                { icon: Bell, text: "Notify your team" },
-                { icon: Calendar, text: "Organize your schedule" },
-                { icon: FileText, text: "Summarize meetings" },
-                { icon: Users, text: "Route client intake forms" },
+                {
+                  icon: Mail,
+                  text: "Create email drafts",
+                  color: "#8B5CF6",
+                  glow: "139,92,246",
+                },
+                {
+                  icon: BarChart3,
+                  text: "Move CRM pipeline stages",
+                  color: "#10B981",
+                  glow: "16,185,129",
+                },
+                {
+                  icon: Bell,
+                  text: "Notify your team",
+                  color: "#EC4899",
+                  glow: "236,72,153",
+                },
+                {
+                  icon: Calendar,
+                  text: "Organize your schedule",
+                  color: "#06B6D4",
+                  glow: "6,182,212",
+                },
+                {
+                  icon: FileText,
+                  text: "Summarize meetings",
+                  color: "#F59E0B",
+                  glow: "245,158,11",
+                },
+                {
+                  icon: Users,
+                  text: "Route client intake forms",
+                  color: "#10B981",
+                  glow: "16,185,129",
+                },
               ].map((item, index) => (
                 <div
                   key={index}
