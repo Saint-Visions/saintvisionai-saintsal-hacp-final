@@ -203,24 +203,23 @@
   .charcoal-depth {
     background: linear-gradient(
       135deg,
-      #0f1419 0%,
-      #181c20 25%,
-      #1a1f24 50%,
-      #0d1117 75%,
-      #0a0e13 100%
+      #080a0e 0%,
+      #0c1015 25%,
+      #10141a 50%,
+      #070b10 75%,
+      #050810 100%
     );
   }
 
   .golden-workspace {
     background: linear-gradient(
       135deg,
-      rgba(15, 20, 25, 0.98) 0%,
-      rgba(24, 28, 32, 0.95) 25%,
-      rgba(26, 31, 36, 0.97) 50%,
-      rgba(13, 17, 23, 0.96) 75%,
-      rgba(10, 14, 19, 0.98) 100%
+      #080a0e 0%,
+      #0c1015 25%,
+      #10141a 50%,
+      #070b10 75%,
+      #050810 100%
     );
-    backdrop-filter: blur(1px);
   }
 
   .golden-dust-settle {
