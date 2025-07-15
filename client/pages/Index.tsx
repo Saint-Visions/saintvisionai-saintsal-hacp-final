@@ -94,7 +94,12 @@ export default function Index() {
 
           {/* Primary CTA */}
           <div className="relative">
-            <Link to="/signup">
+            <Link
+              to="/signup"
+              onClick={(e) => {
+                console.log("Signup button clicked");
+              }}
+            >
               <Button
                 className="text-xl px-12 py-6 font-semibold relative"
                 style={{
