@@ -26,21 +26,30 @@ export default function Index() {
         backgroundAttachment: "fixed",
       }}
     >
+      {/* Subtle Facility Atmosphere */}
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          background:
+            "linear-gradient(180deg, rgba(16,22,28,0.2) 0%, rgba(0,0,0,0.4) 50%, rgba(16,22,28,0.6) 100%)",
+        }}
+      />
+
       {/* Subtle Gold Dust Particles */}
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
           backgroundImage: `
-            radial-gradient(2px 2px at 20px 30px, rgba(255,215,0,0.1), transparent),
-            radial-gradient(1px 1px at 40px 70px, rgba(255,215,0,0.08), transparent),
-            radial-gradient(1px 1px at 90px 40px, rgba(255,215,0,0.06), transparent),
-            radial-gradient(2px 2px at 130px 80px, rgba(255,215,0,0.1), transparent),
-            radial-gradient(1px 1px at 160px 30px, rgba(255,215,0,0.05), transparent)
+            radial-gradient(2px 2px at 20px 30px, rgba(255,215,0,0.08), transparent),
+            radial-gradient(1px 1px at 40px 70px, rgba(255,215,0,0.06), transparent),
+            radial-gradient(1px 1px at 90px 40px, rgba(255,215,0,0.04), transparent),
+            radial-gradient(2px 2px at 130px 80px, rgba(255,215,0,0.08), transparent),
+            radial-gradient(1px 1px at 160px 30px, rgba(255,215,0,0.03), transparent)
           `,
           backgroundRepeat: "repeat",
           backgroundSize: "200px 100px",
           animation: "goldDustFloat 20s ease-in-out infinite",
-          opacity: 0.4,
+          opacity: 0.5,
         }}
       />
 
