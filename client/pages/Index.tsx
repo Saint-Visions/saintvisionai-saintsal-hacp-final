@@ -92,14 +92,9 @@ export default function Index() {
             Chat with AI. Take action instantly. Stay in control.
           </p>
 
-          {/* Primary CTA */}
+                              {/* Primary CTA */}
           <div className="relative">
-            <Link
-              to="/signup"
-              onClick={(e) => {
-                console.log("Signup button clicked");
-              }}
-            >
+            <a href="https://saintvisionai.com/signup">
               <Button
                 className="text-xl px-12 py-6 font-semibold relative"
                 style={{
