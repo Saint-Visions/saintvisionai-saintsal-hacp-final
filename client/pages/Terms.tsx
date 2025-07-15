@@ -328,8 +328,16 @@ export default function Terms() {
         {/* Footer */}
         <div className="mt-12 text-center text-sm text-muted-foreground">
           <p>
-            © 2025 Saint Vision Group LLC. Protected under U.S. Patent No.
-            10,290,222
+            © 2025{" "}
+            <a
+              href="https://saintvisiongroup.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-primary hover:text-primary/80 transition-colors"
+            >
+              Saint Vision Group LLC
+            </a>
+            . Protected under U.S. Patent No. 10,290,222
           </p>
           <div className="mt-4 space-x-4">
             <Link
