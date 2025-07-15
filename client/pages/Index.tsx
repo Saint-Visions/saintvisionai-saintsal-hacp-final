@@ -4,7 +4,6 @@ import {
   MessageSquare,
   Users,
   BarChart3,
-  Smartphone,
   Chrome,
   Mic,
   Calendar,
@@ -26,71 +25,115 @@ export default function Index() {
         backgroundAttachment: "fixed",
       }}
     >
-      {/* Simple Clean Overlay */}
+      {/* Cinematic Background Atmosphere */}
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
           background:
-            "linear-gradient(180deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.3) 100%)",
+            "radial-gradient(ellipse at center bottom, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.6) 70%, rgba(16,22,28,0.9) 100%)",
+        }}
+      />
+
+      {/* Settling Gold Embers - Lower Background Only */}
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          backgroundImage: `
+            radial-gradient(1px 1px at 50px 85%, rgba(255,215,0,0.3), transparent),
+            radial-gradient(2px 2px at 150px 90%, rgba(255,215,0,0.2), transparent),
+            radial-gradient(1px 1px at 250px 88%, rgba(255,215,0,0.25), transparent),
+            radial-gradient(2px 2px at 350px 92%, rgba(255,215,0,0.15), transparent),
+            radial-gradient(1px 1px at 450px 87%, rgba(255,215,0,0.2), transparent)
+          `,
+          backgroundRepeat: "repeat-x",
+          backgroundSize: "500px 200px",
+          backgroundPosition: "0 80%",
+          animation: "emberSettle 30s ease-in-out infinite",
+          opacity: 0.6,
         }}
       />
 
       <div className="relative z-10">
-        {/* Hero Section */}
-        <section className="min-h-screen flex items-center justify-center px-6 py-20">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1
-              className="text-5xl md:text-7xl font-bold mb-6"
+        {/* Native Hero Section - No Boxes */}
+        <section className="min-h-screen flex flex-col items-center justify-center px-6 py-20">
+          {/* SaintSal Logo - Native to Environment */}
+          <div className="mb-8">
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets/TEMP/23b227793103accd33c7649ebabb0572cddb55c1?width=2048"
+              alt="SAINTSAL™ Logo"
+              className="w-20 h-20"
               style={{
-                fontFamily: "Cinzel Decorative, serif",
-                color: "#FFD700",
-                textShadow: "0 0 30px rgba(255,215,0,0.4)",
-                lineHeight: "1.1",
+                filter: "drop-shadow(0 0 20px rgba(255,215,0,0.4))",
+                animation: "subtle-float 6s ease-in-out infinite",
               }}
-            >
-              Your AI Companion for Real Work.
-            </h1>
+            />
+          </div>
 
-            <p
-              className="text-xl md:text-2xl mb-4 text-white/90"
-              style={{
-                fontFamily: "Inter, sans-serif",
-                textShadow: "0 0 10px rgba(255,255,255,0.1)",
-              }}
-            >
-              Built for execution — not entertainment.
-            </p>
+          {/* Native Typography */}
+          <h1
+            className="text-5xl md:text-7xl font-bold mb-6 text-center max-w-5xl"
+            style={{
+              fontFamily: "Cinzel Decorative, serif",
+              color: "#FFD700",
+              textShadow:
+                "0 0 40px rgba(255,215,0,0.3), 0 0 80px rgba(255,215,0,0.1)",
+              lineHeight: "1.1",
+              letterSpacing: "-0.02em",
+            }}
+          >
+            Your AI Companion for Real Work.
+          </h1>
 
-            <p
-              className="text-lg md:text-xl mb-12 text-gray-300"
-              style={{
-                fontFamily: "Inter, sans-serif",
-              }}
-            >
-              Dual AI chat. Instant results. Full control.
-            </p>
+          <p
+            className="text-xl md:text-2xl mb-4 text-center max-w-3xl"
+            style={{
+              fontFamily: "Inter, sans-serif",
+              color: "rgba(255,255,255,0.95)",
+              textShadow: "0 0 20px rgba(255,255,255,0.1)",
+              fontWeight: "300",
+            }}
+          >
+            Built for execution — not entertainment.
+          </p>
 
+          <p
+            className="text-lg md:text-xl mb-12 text-center max-w-2xl"
+            style={{
+              fontFamily: "Inter, sans-serif",
+              color: "rgba(255,255,255,0.7)",
+              fontWeight: "300",
+            }}
+          >
+            Dual AI chat. Instant results. Full control.
+          </p>
+
+          {/* Divine Floating CTA */}
+          <div className="relative">
             <Link to="/signup">
               <Button
-                className="text-xl px-12 py-4 font-bold"
+                className="text-xl px-12 py-6 font-semibold relative"
                 style={{
-                  background: "linear-gradient(90deg, #FFD700, #FFB400)",
+                  background:
+                    "linear-gradient(135deg, #FFD700 0%, #FFB400 100%)",
                   color: "#000",
-                  borderRadius: "12px",
+                  borderRadius: "16px",
                   boxShadow:
-                    "0 0 30px rgba(255,215,0,0.4), 0 8px 25px rgba(0,0,0,0.3)",
-                  transition: "all 0.3s ease",
+                    "0 0 40px rgba(255,215,0,0.4), 0 20px 40px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.2)",
+                  transition: "all 0.4s cubic-bezier(0.4, 0, 0.2, 1)",
                   fontFamily: "Inter, sans-serif",
+                  border: "1px solid rgba(255,215,0,0.3)",
+                  backdropFilter: "blur(10px)",
                 }}
                 onMouseEnter={(e) => {
-                  e.currentTarget.style.transform = "scale(1.05)";
+                  e.currentTarget.style.transform =
+                    "translateY(-2px) scale(1.02)";
                   e.currentTarget.style.boxShadow =
-                    "0 0 40px rgba(255,215,0,0.6), 0 12px 30px rgba(0,0,0,0.4)";
+                    "0 0 60px rgba(255,215,0,0.6), 0 30px 60px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.3)";
                 }}
                 onMouseLeave={(e) => {
-                  e.currentTarget.style.transform = "scale(1)";
+                  e.currentTarget.style.transform = "translateY(0) scale(1)";
                   e.currentTarget.style.boxShadow =
-                    "0 0 30px rgba(255,215,0,0.4), 0 8px 25px rgba(0,0,0,0.3)";
+                    "0 0 40px rgba(255,215,0,0.4), 0 20px 40px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.2)";
                 }}
               >
                 → Start Using SaintSal™
@@ -99,16 +142,18 @@ export default function Index() {
           </div>
         </section>
 
-        {/* Section 2 - What It Does */}
+        {/* Glass Container Sections */}
         <section className="py-20 px-6">
           <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-16">
+            {/* Native Section Header */}
+            <div className="text-center mb-20">
               <h2
                 className="text-4xl md:text-5xl font-bold mb-6"
                 style={{
                   fontFamily: "Cinzel Decorative, serif",
                   color: "#FFD700",
-                  textShadow: "0 0 20px rgba(255,215,0,0.3)",
+                  textShadow: "0 0 30px rgba(255,215,0,0.3)",
+                  letterSpacing: "-0.01em",
                 }}
               >
                 Smarter Than ChatGPT.
@@ -117,7 +162,8 @@ export default function Index() {
               </h2>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+            {/* Glass Feature Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
               {[
                 {
                   icon: MessageSquare,
@@ -141,12 +187,37 @@ export default function Index() {
                   subtitle: "Just type — it executes",
                 },
               ].map((feature, index) => (
-                <div key={index} className="text-center">
+                <div
+                  key={index}
+                  className="text-center p-6 group"
+                  style={{
+                    background: "rgba(255,255,255,0.02)",
+                    backdropFilter: "blur(20px)",
+                    borderRadius: "24px",
+                    border: "1px solid rgba(255,215,0,0.1)",
+                    boxShadow:
+                      "0 8px 32px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.05)",
+                    transition: "all 0.4s cubic-bezier(0.4, 0, 0.2, 1)",
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.transform = "translateY(-4px)";
+                    e.currentTarget.style.boxShadow =
+                      "0 0 40px rgba(255,215,0,0.2), 0 20px 60px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.1)";
+                    e.currentTarget.style.borderColor = "rgba(255,215,0,0.3)";
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.transform = "translateY(0)";
+                    e.currentTarget.style.boxShadow =
+                      "0 8px 32px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.05)";
+                    e.currentTarget.style.borderColor = "rgba(255,215,0,0.1)";
+                  }}
+                >
                   <div
-                    className="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center"
+                    className="w-16 h-16 mx-auto mb-6 rounded-full flex items-center justify-center"
                     style={{
-                      background: "rgba(255,215,0,0.1)",
-                      boxShadow: "0 0 20px rgba(255,215,0,0.2)",
+                      background:
+                        "radial-gradient(circle, rgba(255,215,0,0.1) 0%, rgba(255,215,0,0.05) 100%)",
+                      border: "1px solid rgba(255,215,0,0.2)",
                     }}
                   >
                     <feature.icon
@@ -155,17 +226,21 @@ export default function Index() {
                     />
                   </div>
                   <h3
-                    className="text-xl font-semibold mb-2"
+                    className="text-xl font-semibold mb-3"
                     style={{
                       fontFamily: "Inter, sans-serif",
                       color: "#FFD700",
+                      fontWeight: "600",
                     }}
                   >
                     {feature.title}
                   </h3>
                   <p
                     className="text-gray-300"
-                    style={{ fontFamily: "Inter, sans-serif" }}
+                    style={{
+                      fontFamily: "Inter, sans-serif",
+                      fontWeight: "300",
+                    }}
                   >
                     {feature.subtitle}
                   </p>
@@ -173,27 +248,35 @@ export default function Index() {
               ))}
             </div>
 
+            {/* Glass CTA Button */}
             <div className="text-center">
               <Link to="/console">
                 <Button
-                  variant="outline"
-                  className="px-8 py-3 text-lg"
+                  className="px-8 py-4 text-lg font-medium"
                   style={{
-                    border: "1px solid #FFD700",
-                    background: "transparent",
+                    background: "rgba(255,215,0,0.05)",
+                    backdropFilter: "blur(20px)",
+                    border: "1px solid rgba(255,215,0,0.3)",
                     color: "#FFD700",
-                    borderRadius: "12px",
+                    borderRadius: "16px",
                     fontFamily: "Inter, sans-serif",
-                    transition: "all 0.3s ease",
+                    transition: "all 0.4s cubic-bezier(0.4, 0, 0.2, 1)",
+                    boxShadow:
+                      "0 8px 32px rgba(0,0,0,0.2), inset 0 1px 0 rgba(255,255,255,0.05)",
                   }}
                   onMouseEnter={(e) => {
                     e.currentTarget.style.background = "rgba(255,215,0,0.1)";
+                    e.currentTarget.style.borderColor = "rgba(255,215,0,0.5)";
                     e.currentTarget.style.boxShadow =
-                      "0 0 20px rgba(255,215,0,0.3)";
+                      "0 0 30px rgba(255,215,0,0.3), 0 16px 40px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.1)";
+                    e.currentTarget.style.transform = "translateY(-2px)";
                   }}
                   onMouseLeave={(e) => {
-                    e.currentTarget.style.background = "transparent";
-                    e.currentTarget.style.boxShadow = "none";
+                    e.currentTarget.style.background = "rgba(255,215,0,0.05)";
+                    e.currentTarget.style.borderColor = "rgba(255,215,0,0.3)";
+                    e.currentTarget.style.boxShadow =
+                      "0 8px 32px rgba(0,0,0,0.2), inset 0 1px 0 rgba(255,255,255,0.05)";
+                    e.currentTarget.style.transform = "translateY(0)";
                   }}
                 >
                   → See How PartnerTech.ai Works
@@ -203,7 +286,7 @@ export default function Index() {
           </div>
         </section>
 
-        {/* Section 3 - Use Cases */}
+        {/* Use Cases - Glass Grid */}
         <section className="py-20 px-6">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
@@ -212,14 +295,14 @@ export default function Index() {
                 style={{
                   fontFamily: "Cinzel Decorative, serif",
                   color: "#FFD700",
-                  textShadow: "0 0 20px rgba(255,215,0,0.3)",
+                  textShadow: "0 0 30px rgba(255,215,0,0.3)",
                 }}
               >
                 Built for Founders, Operators, and Doers.
               </h2>
             </div>
 
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 mb-12">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-12">
               {[
                 { icon: Mail, text: "Create email drafts" },
                 { icon: BarChart3, text: "Move CRM pipeline stages" },
@@ -228,22 +311,44 @@ export default function Index() {
                 { icon: FileText, text: "Summarize meetings" },
                 { icon: Users, text: "Route client intake forms" },
               ].map((item, index) => (
-                <div key={index} className="text-center">
+                <div
+                  key={index}
+                  className="text-center p-4 group"
+                  style={{
+                    background: "rgba(255,255,255,0.01)",
+                    backdropFilter: "blur(10px)",
+                    borderRadius: "20px",
+                    border: "1px solid rgba(255,215,0,0.08)",
+                    transition: "all 0.3s ease",
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.borderColor = "rgba(255,215,0,0.2)";
+                    e.currentTarget.style.background = "rgba(255,215,0,0.02)";
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.borderColor = "rgba(255,215,0,0.08)";
+                    e.currentTarget.style.background = "rgba(255,255,255,0.01)";
+                  }}
+                >
                   <div
-                    className="w-12 h-12 mx-auto mb-3 rounded-lg flex items-center justify-center"
+                    className="w-10 h-10 mx-auto mb-3 rounded-xl flex items-center justify-center"
                     style={{
                       background: "rgba(255,215,0,0.08)",
-                      border: "1px solid rgba(255,215,0,0.2)",
+                      border: "1px solid rgba(255,215,0,0.15)",
                     }}
                   >
                     <item.icon
-                      className="w-6 h-6"
+                      className="w-5 h-5"
                       style={{ color: "#FFD700" }}
                     />
                   </div>
                   <p
-                    className="text-sm text-gray-300"
-                    style={{ fontFamily: "Inter, sans-serif" }}
+                    className="text-sm"
+                    style={{
+                      fontFamily: "Inter, sans-serif",
+                      color: "rgba(255,255,255,0.8)",
+                      fontWeight: "300",
+                    }}
                   >
                     {item.text}
                   </p>
@@ -253,8 +358,12 @@ export default function Index() {
 
             <div className="text-center">
               <p
-                className="text-lg text-gray-400 italic"
-                style={{ fontFamily: "Inter, sans-serif" }}
+                className="text-lg italic"
+                style={{
+                  fontFamily: "Inter, sans-serif",
+                  color: "rgba(255,255,255,0.6)",
+                  fontWeight: "300",
+                }}
               >
                 No bloat. No noise. Just answers and action.
               </p>
@@ -262,7 +371,7 @@ export default function Index() {
           </div>
         </section>
 
-        {/* Section 4 - What Makes It Different */}
+        {/* Difference Section */}
         <section className="py-20 px-6">
           <div className="max-w-4xl mx-auto text-center">
             <h2
@@ -270,7 +379,7 @@ export default function Index() {
               style={{
                 fontFamily: "Cinzel Decorative, serif",
                 color: "#FFD700",
-                textShadow: "0 0 20px rgba(255,215,0,0.3)",
+                textShadow: "0 0 30px rgba(255,215,0,0.3)",
               }}
             >
               Most AIs talk.
@@ -279,10 +388,12 @@ export default function Index() {
             </h2>
 
             <p
-              className="text-xl md:text-2xl text-white/90 mb-16"
+              className="text-xl md:text-2xl mb-16"
               style={{
                 fontFamily: "Inter, sans-serif",
+                color: "rgba(255,255,255,0.8)",
                 lineHeight: "1.4",
+                fontWeight: "300",
               }}
             >
               You don't need training.
@@ -294,15 +405,15 @@ export default function Index() {
           </div>
         </section>
 
-        {/* Final CTA */}
+        {/* Final Divine CTA */}
         <section className="py-20 px-6">
           <div className="max-w-4xl mx-auto text-center">
             <h2
-              className="text-3xl md:text-4xl font-bold mb-8"
+              className="text-3xl md:text-4xl font-bold mb-12"
               style={{
                 fontFamily: "Cinzel Decorative, serif",
                 color: "#FFD700",
-                textShadow: "0 0 20px rgba(255,215,0,0.3)",
+                textShadow: "0 0 30px rgba(255,215,0,0.3)",
               }}
             >
               Try SaintSal™ Now — No Login Required.
@@ -311,44 +422,47 @@ export default function Index() {
             <div className="relative inline-block">
               <Link to="/console">
                 <Button
-                  className="text-xl px-12 py-4 font-bold relative"
+                  className="text-xl px-12 py-6 font-semibold relative"
                   style={{
-                    background: "linear-gradient(90deg, #FFD700, #FFB400)",
+                    background:
+                      "linear-gradient(135deg, #FFD700 0%, #FFB400 100%)",
                     color: "#000",
-                    borderRadius: "12px",
+                    borderRadius: "20px",
                     boxShadow:
-                      "0 0 40px rgba(255,215,0,0.5), 0 8px 25px rgba(0,0,0,0.3)",
-                    transition: "all 0.3s ease",
+                      "0 0 60px rgba(255,215,0,0.5), 0 30px 60px rgba(0,0,0,0.3), inset 0 2px 0 rgba(255,255,255,0.2)",
+                    transition: "all 0.4s cubic-bezier(0.4, 0, 0.2, 1)",
                     fontFamily: "Inter, sans-serif",
+                    border: "1px solid rgba(255,215,0,0.3)",
                   }}
                   onMouseEnter={(e) => {
-                    e.currentTarget.style.transform = "scale(1.05)";
+                    e.currentTarget.style.transform =
+                      "translateY(-4px) scale(1.02)";
                     e.currentTarget.style.boxShadow =
-                      "0 0 60px rgba(255,215,0,0.7), 0 12px 30px rgba(0,0,0,0.4)";
+                      "0 0 80px rgba(255,215,0,0.7), 0 40px 80px rgba(0,0,0,0.4), inset 0 2px 0 rgba(255,255,255,0.3)";
                   }}
                   onMouseLeave={(e) => {
-                    e.currentTarget.style.transform = "scale(1)";
+                    e.currentTarget.style.transform = "translateY(0) scale(1)";
                     e.currentTarget.style.boxShadow =
-                      "0 0 40px rgba(255,215,0,0.5), 0 8px 25px rgba(0,0,0,0.3)";
+                      "0 0 60px rgba(255,215,0,0.5), 0 30px 60px rgba(0,0,0,0.3), inset 0 2px 0 rgba(255,255,255,0.2)";
                   }}
                 >
                   → Launch Assistant
                 </Button>
               </Link>
 
-              {/* Subtle SaintSal Avatar Fade */}
+              {/* Subtle SaintSal Presence */}
               <div
-                className="absolute -right-16 top-1/2 transform -translate-y-1/2 opacity-20 pointer-events-none"
+                className="absolute -right-20 top-1/2 transform -translate-y-1/2 opacity-15 pointer-events-none hidden md:block"
                 style={{
-                  animation: "subtle-float 4s ease-in-out infinite",
+                  animation: "subtle-float 8s ease-in-out infinite",
                 }}
               >
                 <img
                   src="https://cdn.builder.io/api/v1/image/assets/TEMP/23b227793103accd33c7649ebabb0572cddb55c1?width=2048"
-                  alt="SaintSal Avatar"
-                  className="w-12 h-12"
+                  alt="SaintSal Presence"
+                  className="w-16 h-16"
                   style={{
-                    filter: "drop-shadow(0 0 10px rgba(255,215,0,0.3))",
+                    filter: "drop-shadow(0 0 15px rgba(255,215,0,0.3))",
                   }}
                 />
               </div>
@@ -356,7 +470,6 @@ export default function Index() {
           </div>
         </section>
 
-        {/* Footer Space */}
         <div className="h-20"></div>
       </div>
     </div>
