@@ -142,7 +142,7 @@ export function Sidebar({ className }: SidebarProps) {
           "fixed left-0 top-0 h-full w-80 transform transition-transform duration-300 ease-in-out z-50",
           "bg-gradient-to-b from-background via-background to-muted/20",
           "border-4 border-warning rounded-3xl m-4",
-          "shadow-2xl shadow-warning/20",
+          "shadow-2xl shadow-warning/20 golden-dust-settle",
           isOpen ? "translate-x-0" : "-translate-x-full",
           "md:translate-x-0",
           className,
