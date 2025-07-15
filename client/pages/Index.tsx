@@ -420,12 +420,31 @@ export default function Index() {
               style={{
                 fontFamily: "Cinzel Decorative, serif",
                 color: "#FFD700",
-                textShadow: "0 0 30px rgba(255,215,0,0.3)",
+                textShadow:
+                  "0 0 10px rgba(255,215,0,0.9), 0 0 20px rgba(255,215,0,0.6), 0 0 40px rgba(255,215,0,0.3)",
               }}
             >
-              Most AIs talk.
+              Most AIs{" "}
+              <span
+                style={{
+                  textShadow:
+                    "0 0 15px rgba(255,255,255,0.8), 0 0 30px rgba(255,255,255,0.4)",
+                  color: "#FFFFFF",
+                }}
+              >
+                talk
+              </span>
+              .
               <br />
-              SaintSal builds, routes, and runs it.
+              <span
+                style={{
+                  textShadow:
+                    "0 0 15px rgba(255,215,0,1), 0 0 30px rgba(255,215,0,0.8), 0 0 60px rgba(255,215,0,0.4)",
+                }}
+              >
+                SaintSal builds, routes, and runs it
+              </span>
+              .
             </h2>
 
             <p
