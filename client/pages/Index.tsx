@@ -76,12 +76,22 @@ export default function Index() {
               fontFamily: "Cinzel Decorative, serif",
               color: "#FFD700",
               textShadow:
-                "0 0 40px rgba(255,215,0,0.3), 0 0 80px rgba(255,215,0,0.1)",
+                "0 0 10px rgba(255,215,0,0.8), 0 0 20px rgba(255,215,0,0.6), 0 0 40px rgba(255,215,0,0.4), 0 0 80px rgba(255,215,0,0.2)",
               lineHeight: "1.1",
               letterSpacing: "-0.02em",
             }}
           >
-            Your AI Companion for Real Work.
+            Your AI Companion for{" "}
+            <span
+              style={{
+                textShadow:
+                  "0 0 15px rgba(255,215,0,1), 0 0 30px rgba(255,215,0,0.8), 0 0 60px rgba(255,215,0,0.4)",
+                color: "#FFD700",
+              }}
+            >
+              Real Work
+            </span>
+            .
           </h1>
 
           <p
