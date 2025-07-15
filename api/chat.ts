@@ -1,5 +1,6 @@
 import { VercelRequest, VercelResponse } from "@vercel/node";
 import { OpenAI } from "openai";
+import { insertServerEvent } from "./events";
 
 let azureOpenAI: OpenAI;
 let standardOpenAI: OpenAI;
