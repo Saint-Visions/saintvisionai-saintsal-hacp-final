@@ -1,0 +1,283 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /**
+   * Tailwind CSS theme
+   * tailwind.config.ts expects the following color variables to be expressed as HSL values.
+   * A different format will require also updating the theme in tailwind.config.ts.
+  */
+  :root {
+    --background: 210 15% 11%; /* Charcoal #10161C */
+    --foreground: 0 0% 95%;
+
+    --card: 210 15% 13%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 210 15% 13%;
+    --popover-foreground: 0 0% 95%;
+
+    --primary: 45 93% 47%; /* Gold */
+    --primary-foreground: 210 15% 11%;
+
+    --secondary: 210 15% 18%;
+    --secondary-foreground: 0 0% 90%;
+
+    --muted: 210 15% 16%;
+    --muted-foreground: 0 0% 60%;
+
+    --accent: 45 93% 47%;
+    --accent-foreground: 210 15% 11%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 210 15% 20%;
+    --input: 210 15% 16%;
+    --ring: 45 93% 47%;
+
+    --radius: 1rem;
+
+    --gradient-start: 45 93% 47%;
+    --gradient-end: 35 100% 45%;
+    --success: 142 76% 36%;
+    --warning: 45 93% 47%;
+    --gold-shimmer: 45 100% 60%;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .light {
+    --background: 0 0% 98%;
+    --foreground: 210 15% 11%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 210 15% 11%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 15% 11%;
+
+    --primary: 45 93% 47%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 45 93% 47%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 45 93% 47%;
+
+    --gradient-start: 45 93% 47%;
+    --gradient-end: 35 100% 45%;
+    --success: 142 76% 36%;
+    --warning: 45 93% 47%;
+    --gold-shimmer: 45 100% 60%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  .gold-shimmer {
+    background: linear-gradient(
+      90deg,
+      hsl(var(--primary)) 0%,
+      hsl(var(--gold-shimmer)) 50%,
+      hsl(var(--primary)) 100%
+    );
+    background-size: 200% 100%;
+    animation: shimmer 2s ease-in-out infinite;
+  }
+
+  .war-grid {
+    background-image:
+      linear-gradient(rgba(45, 93, 47, 0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(45, 93, 47, 0.05) 1px, transparent 1px);
+    background-size: 20px 20px;
+  }
+
+  .cinematic-fade {
+    animation: fadeInUp 0.6s ease-out;
+  }
+
+  .gotham-glow {
+    box-shadow:
+      0 0 20px rgba(231, 176, 8, 0.3),
+      0 0 40px rgba(231, 176, 8, 0.1),
+      inset 0 0 20px rgba(231, 176, 8, 0.05);
+    border: 1px solid rgba(231, 176, 8, 0.2);
+  }
+
+  .gold-particles {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .gold-particles::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image:
+      radial-gradient(
+        1px 1px at 20px 30px,
+        rgba(231, 176, 8, 0.3),
+        transparent
+      ),
+      radial-gradient(
+        1px 1px at 40px 70px,
+        rgba(231, 176, 8, 0.4),
+        transparent
+      ),
+      radial-gradient(
+        1px 1px at 90px 40px,
+        rgba(231, 176, 8, 0.2),
+        transparent
+      ),
+      radial-gradient(
+        1px 1px at 130px 80px,
+        rgba(231, 176, 8, 0.3),
+        transparent
+      ),
+      radial-gradient(
+        1px 1px at 160px 30px,
+        rgba(231, 176, 8, 0.2),
+        transparent
+      );
+    background-repeat: repeat;
+    background-size: 200px 100px;
+    animation: sparkle 8s linear infinite;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  .text-glow {
+    text-shadow:
+      0 0 10px rgba(231, 176, 8, 0.5),
+      0 0 20px rgba(231, 176, 8, 0.3),
+      0 0 30px rgba(231, 176, 8, 0.1);
+  }
+
+  .charcoal-depth {
+    background: linear-gradient(
+      135deg,
+      #0f1419 0%,
+      #181c20 25%,
+      #1a1f24 50%,
+      #0d1117 75%,
+      #0a0e13 100%
+    );
+  }
+
+  .elite-card {
+    background: rgba(24, 28, 32, 0.9);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(231, 176, 8, 0.1);
+    box-shadow:
+      0 8px 32px rgba(0, 0, 0, 0.3),
+      0 0 0 1px rgba(231, 176, 8, 0.05),
+      inset 0 1px 0 rgba(231, 176, 8, 0.1);
+  }
+
+  .professional-blur {
+    backdrop-filter: blur(20px) saturate(1.2);
+    background: rgba(24, 28, 32, 0.85);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes sparkle {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(200px);
+    opacity: 0;
+  }
+}
+
+@keyframes pulse-glow {
+  0%,
+  100% {
+    box-shadow:
+      0 0 20px rgba(231, 176, 8, 0.2),
+      0 0 40px rgba(231, 176, 8, 0.1);
+  }
+  50% {
+    box-shadow:
+      0 0 30px rgba(231, 176, 8, 0.4),
+      0 0 60px rgba(231, 176, 8, 0.2);
+  }
+}
+
+@keyframes subtle-float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
+}
