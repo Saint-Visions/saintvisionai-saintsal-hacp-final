@@ -210,22 +210,36 @@ export default function Index() {
                   icon: MessageSquare,
                   title: "Dual Chat Mode",
                   subtitle: "Ask + Act",
+                  color: "#8B5CF6", // Purple
+                  glow: "139,92,246",
                 },
                 {
                   icon: Users,
                   title: "CRM Routing",
                   subtitle: "Smart Automations",
+                  color: "#10B981", // Green
+                  glow: "16,185,129",
                 },
                 {
                   icon: Chrome,
                   title: "Chrome Extension",
                   subtitle: "Lead Scoring",
+                  color: "#06B6D4", // Cyan
+                  glow: "6,182,212",
                 },
-                { icon: Mic, title: "GPT-4o", subtitle: "Voice Input" },
+                {
+                  icon: Mic,
+                  title: "GPT-4o",
+                  subtitle: "Voice Input",
+                  color: "#EC4899", // Pink
+                  glow: "236,72,153",
+                },
                 {
                   icon: BarChart3,
                   title: "No Setup",
                   subtitle: "Just type — it executes",
+                  color: "#F59E0B", // Orange
+                  glow: "245,158,11",
                 },
               ].map((feature, index) => (
                 <div
