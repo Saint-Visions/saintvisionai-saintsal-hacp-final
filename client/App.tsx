@@ -8,6 +8,7 @@ import ProtectedRoute from "./components/ProtectedRoute";
 import Index from "./pages/Index";
 import Login from "./pages/Login";
 import Console from "./pages/Console";
+import Chat from "./pages/Chat";
 import Dashboard from "./pages/Dashboard";
 import CRM from "./pages/CRM";
 import Pricing from "./pages/Pricing";
@@ -34,6 +35,14 @@ const App = () => (
           element={
             <ProtectedRoute>
               <Console />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/chat"
+          element={
+            <ProtectedRoute>
+              <Chat />
             </ProtectedRoute>
           }
         />
