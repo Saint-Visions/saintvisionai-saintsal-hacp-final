@@ -12,7 +12,7 @@ export default function Index() {
           linear-gradient(135deg, rgba(16, 22, 28, 0.75) 0%, rgba(0, 0, 0, 0.4) 50%, rgba(16, 22, 28, 0.85) 100%),
           radial-gradient(circle at 20% 80%, rgba(231, 176, 8, 0.05) 0%, transparent 50%),
           radial-gradient(circle at 80% 20%, rgba(231, 176, 8, 0.03) 0%, transparent 50%),
-          url('https://cdn.builder.io/api/v1/image/assets%2Fd83998c6a81f466db4fb83ab90c7ba25%2F8155e04eb6064174a0cb82e2eecf77b6')
+          url('https://cdn.builder.io/api/v1/image/assets%2Fd83998c6a81f466db4fb83ab90c7ba25%2F179a1108a9c7482b829b68cf4cc7f89f')
         `,
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center",
