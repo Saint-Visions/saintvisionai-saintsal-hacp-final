@@ -148,7 +148,7 @@ export function EnhancedSidebar({ className }: EnhancedSidebarProps) {
           "fixed left-0 top-0 h-screen w-full max-w-md transform transition-all duration-500 ease-out z-50",
           "bg-gradient-to-b from-charcoal/95 via-background/90 to-charcoal/98",
           "border-r-4 border-primary/30 shadow-2xl shadow-primary/10",
-          "backdrop-blur-xl",
+          "backdrop-blur-xl golden-dust-settle",
           isOpen ? "translate-x-0" : "-translate-x-full",
           "md:translate-x-0 md:w-96",
           "overflow-hidden relative",
