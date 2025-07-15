@@ -20,7 +20,7 @@ export default function Index() {
         <div className="flex-1 flex items-center justify-center p-6">
           <div className="max-w-md w-full space-y-6">
             {/* Quote Bubble */}
-            <div className="bg-black/90 backdrop-blur-sm rounded-2xl p-6 border border-yellow-400/40 relative">
+            <div className="bg-black/75 backdrop-blur-sm rounded-2xl p-6 border border-yellow-400/40 relative">
               <div className="text-center">
                 <p className="text-yellow-400 text-lg font-medium mb-1">
                   "SaintSal" AI doesn't just answer.
