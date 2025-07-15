@@ -1,0 +1,102 @@
+{
+  "name": "SaintSal™ AI Platform",
+  "short_name": "SaintSal AI",
+  "description": "Divine AI Assistant powered by HACP™ technology",
+  "start_url": "/chat",
+  "display": "standalone",
+  "background_color": "#0a0a0a",
+  "theme_color": "#DAA520",
+  "orientation": "portrait",
+  "scope": "/",
+  "lang": "en",
+  "categories": ["productivity", "business", "utilities"],
+  "icons": [
+    {
+      "src": "/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Chat with SaintSal™",
+      "short_name": "Chat",
+      "description": "Start a conversation with your AI assistant",
+      "url": "/chat",
+      "icons": [
+        {
+          "src": "/icon-192x192.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "Voice Call",
+      "short_name": "Voice",
+      "description": "Call SaintSal™ AI directly",
+      "url": "/chat?mode=voice",
+      "icons": [
+        {
+          "src": "/icon-192x192.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "Console",
+      "short_name": "Console",
+      "description": "Full AI workspace",
+      "url": "/console",
+      "icons": [
+        {
+          "src": "/icon-192x192.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "Dashboard",
+      "short_name": "Dashboard",
+      "description": "Analytics and insights",
+      "url": "/dashboard",
+      "icons": [
+        {
+          "src": "/icon-192x192.png",
+          "sizes": "192x192"
+        }
+      ]
+    }
+  ],
+  "file_handlers": [
+    {
+      "action": "/chat",
+      "accept": {
+        "text/plain": [".txt"],
+        "application/pdf": [".pdf"],
+        "image/*": [".png", ".jpg", ".jpeg", ".gif", ".webp"]
+      }
+    }
+  ],
+  "share_target": {
+    "action": "/chat",
+    "method": "GET",
+    "params": {
+      "title": "title",
+      "text": "text",
+      "url": "url"
+    }
+  },
+  "protocol_handlers": [
+    {
+      "protocol": "web+saintsal",
+      "url": "/chat?action=%s"
+    }
+  ]
+}
