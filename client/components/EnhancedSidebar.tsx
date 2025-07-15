@@ -84,7 +84,7 @@ const sidebarItems = [
   {
     icon: GraduationCap,
     label: "SVT Institute of AI (R + D)",
-    href: "/institute",
+    href: "https://www.saintvisiontech.com",
     emoji: "🏛️",
   },
   {
