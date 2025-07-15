@@ -25,12 +25,12 @@ export default function Index() {
         backgroundAttachment: "fixed",
       }}
     >
-      {/* Cinematic Background Atmosphere */}
+      {/* Soft Milky Atmosphere */}
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
           background:
-            "radial-gradient(ellipse at center bottom, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.6) 70%, rgba(16,22,28,0.9) 100%)",
+            "linear-gradient(180deg, rgba(255,255,255,0.02) 0%, rgba(0,0,0,0.1) 30%, rgba(0,0,0,0.3) 70%, rgba(16,22,28,0.6) 100%)",
         }}
       />
 
