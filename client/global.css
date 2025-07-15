@@ -281,3 +281,18 @@
     transform: translateY(-3px);
   }
 }
+
+@keyframes goldDustFloat {
+  0% {
+    transform: translateY(-10px) translateX(0px);
+    opacity: 0.6;
+  }
+  50% {
+    transform: translateY(5px) translateX(10px);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(15px) translateX(-5px);
+    opacity: 0.4;
+  }
+}
