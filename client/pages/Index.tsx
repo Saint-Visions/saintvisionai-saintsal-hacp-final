@@ -25,31 +25,12 @@ export default function Index() {
         backgroundAttachment: "fixed",
       }}
     >
-      {/* Soft Milky Atmosphere */}
+      {/* Natural Environment Atmosphere */}
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
           background:
-            "linear-gradient(180deg, rgba(255,255,255,0.02) 0%, rgba(0,0,0,0.1) 30%, rgba(0,0,0,0.3) 70%, rgba(16,22,28,0.6) 100%)",
-        }}
-      />
-
-      {/* Settling Gold Embers - Lower Background Only */}
-      <div
-        className="absolute inset-0 pointer-events-none"
-        style={{
-          backgroundImage: `
-            radial-gradient(1px 1px at 50px 85%, rgba(255,215,0,0.3), transparent),
-            radial-gradient(2px 2px at 150px 90%, rgba(255,215,0,0.2), transparent),
-            radial-gradient(1px 1px at 250px 88%, rgba(255,215,0,0.25), transparent),
-            radial-gradient(2px 2px at 350px 92%, rgba(255,215,0,0.15), transparent),
-            radial-gradient(1px 1px at 450px 87%, rgba(255,215,0,0.2), transparent)
-          `,
-          backgroundRepeat: "repeat-x",
-          backgroundSize: "500px 200px",
-          backgroundPosition: "0 80%",
-          animation: "emberSettle 30s ease-in-out infinite",
-          opacity: 0.6,
+            "linear-gradient(180deg, rgba(0,0,0,0.05) 0%, rgba(0,0,0,0.15) 50%, rgba(0,0,0,0.25) 100%)",
         }}
       />
 
