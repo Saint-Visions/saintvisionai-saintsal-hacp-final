@@ -247,7 +247,7 @@ export default function Index() {
                     className="w-10 h-10 mx-auto mb-4"
                     style={{
                       color: feature.color,
-                      filter: `drop-shadow(0 0 8px rgba(${feature.glow},0.8))`,
+                      filter: `drop-shadow(0 0 2px rgba(${feature.glow},0.3))`,
                     }}
                   />
                   <h3
