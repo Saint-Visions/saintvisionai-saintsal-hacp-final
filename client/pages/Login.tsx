@@ -87,10 +87,11 @@ export default function Login() {
       <div
         className="relative z-10 min-h-screen flex items-center justify-center p-6"
         style={{
-          backgroundImage: `url('https://cdn.builder.io/api/v1/image/assets%2Fd83998c6a81f466db4fb83ab90c7ba25%2F6b86fa2c1e4c414ba874771fa8473016')`,
+          backgroundImage: `url('https://cdn.builder.io/api/v1/image/assets%2Fd83998c6a81f466db4fb83ab90c7ba25%2F7d4d645a636d471a8c748e4565e96c6a?format=webp&width=800')`,
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center",
           backgroundSize: "cover",
+          backgroundAttachment: "fixed",
         }}
       >
         <div className="w-full max-w-md space-y-6">
