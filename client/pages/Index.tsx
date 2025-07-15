@@ -242,60 +242,33 @@ export default function Index() {
                   glow: "245,158,11",
                 },
               ].map((feature, index) => (
-                <div
-                  key={index}
-                  className="text-center p-6 group"
-                  style={{
-                    background: "rgba(255,255,255,0.02)",
-                    backdropFilter: "blur(20px)",
-                    borderRadius: "24px",
-                    border: "1px solid rgba(255,215,0,0.1)",
-                    boxShadow:
-                      "0 8px 32px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.05)",
-                    transition: "all 0.4s cubic-bezier(0.4, 0, 0.2, 1)",
-                  }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.transform = "translateY(-4px)";
-                    e.currentTarget.style.boxShadow =
-                      "0 0 40px rgba(255,215,0,0.2), 0 20px 60px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.1)";
-                    e.currentTarget.style.borderColor = "rgba(255,215,0,0.3)";
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.transform = "translateY(0)";
-                    e.currentTarget.style.boxShadow =
-                      "0 8px 32px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.05)";
-                    e.currentTarget.style.borderColor = "rgba(255,215,0,0.1)";
-                  }}
-                >
-                  <div
-                    className="w-16 h-16 mx-auto mb-6 rounded-full flex items-center justify-center"
+                <div key={index} className="text-center">
+                  <feature.icon
+                    className="w-10 h-10 mx-auto mb-4"
                     style={{
-                      background:
-                        "radial-gradient(circle, rgba(255,215,0,0.1) 0%, rgba(255,215,0,0.05) 100%)",
-                      border: "1px solid rgba(255,215,0,0.2)",
+                      color: feature.color,
+                      filter: `drop-shadow(0 0 8px rgba(${feature.glow},0.8))`,
                     }}
-                  >
-                    <feature.icon
-                      className="w-8 h-8"
-                      style={{ color: "#FFD700" }}
-                    />
-                  </div>
+                  />
                   <h3
-                    className="text-xl font-semibold mb-3"
+                    className="text-2xl font-bold mb-2"
                     style={{
                       fontFamily: "Inter, sans-serif",
                       color: feature.color,
-                      fontWeight: "600",
-                      textShadow: `0 0 8px rgba(${feature.glow},0.8), 0 0 16px rgba(${feature.glow},0.4), 0 0 24px rgba(${feature.glow},0.2)`,
+                      fontWeight: "800",
+                      textShadow: `0 0 12px rgba(${feature.glow},1), 0 0 24px rgba(${feature.glow},0.6), 0 0 36px rgba(${feature.glow},0.3)`,
+                      textTransform: "uppercase",
+                      letterSpacing: "0.05em",
                     }}
                   >
                     {feature.title}
                   </h3>
                   <p
-                    className="text-gray-300"
+                    className="text-sm"
                     style={{
                       fontFamily: "Inter, sans-serif",
-                      fontWeight: "300",
+                      color: "rgba(255,255,255,0.7)",
+                      fontWeight: "400",
                     }}
                   >
                     {feature.subtitle}
