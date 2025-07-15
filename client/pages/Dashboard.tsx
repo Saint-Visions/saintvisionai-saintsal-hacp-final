@@ -1,5 +1,6 @@
 import { Sidebar } from "@/components/Sidebar";
 import { Button } from "@/components/ui/button";
+import { GoldenAtmosphere } from "@/components/GoldenAtmosphere";
 import {
   Card,
   CardContent,
