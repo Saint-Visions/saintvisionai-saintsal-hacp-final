@@ -27,15 +27,44 @@ export default function Index() {
         <div className="flex-1 flex items-center justify-center p-6">
           <div className="max-w-md w-full space-y-6">
             {/* Quote Bubble */}
-            <div className="bg-black/75 backdrop-blur-sm rounded-2xl p-6 border border-yellow-400/40 relative">
+            <div
+              className="bg-black/75 backdrop-blur-sm rounded-2xl p-6 border border-yellow-400/40 relative"
+              style={{
+                boxShadow:
+                  "0 0 20px rgba(255,215,0,0.3), 0 0 40px rgba(255,215,0,0.1)",
+                transition: "all 0.3s ease",
+              }}
+            >
               <div className="text-center">
-                <p className="text-yellow-400 text-lg font-medium mb-1">
+                <p
+                  className="text-lg font-medium mb-1"
+                  style={{
+                    color: "#FFD700",
+                    fontFamily: "Cinzel Decorative, serif",
+                    textShadow: "0 0 10px rgba(255,215,0,0.5)",
+                  }}
+                >
                   "SaintSal" AI doesn't just answer.
                 </p>
-                <p className="text-yellow-400 text-lg font-medium mb-1">
+                <p
+                  className="text-lg font-medium mb-1"
+                  style={{
+                    color: "#FFD700",
+                    fontFamily: "Cinzel Decorative, serif",
+                    textShadow: "0 0 10px rgba(255,215,0,0.5)",
+                  }}
+                >
                   It adapts. It empowers. It becomes your...
                 </p>
-                <p className="text-yellow-400 text-2xl font-bold">
+                <p
+                  className="text-2xl font-bold"
+                  style={{
+                    color: "#FFD700",
+                    fontFamily: "Cinzel Decorative, serif",
+                    textShadow: "0 0 15px rgba(255,215,0,0.7)",
+                    fontSize: "28px",
+                  }}
+                >
                   GOTTA GUY™!
                 </p>
               </div>
