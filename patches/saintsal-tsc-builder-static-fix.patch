@@ -1,0 +1,11 @@
+diff --git a/client/components/builder/builder-registry.ts b/client/components/builder/builder-registry.ts
+index 0000000..1111111 100644
+--- a/client/components/builder/builder-registry.ts
++++ b/client/components/builder/builder-registry.ts
+@@ -13,7 +13,7 @@
+-import { builder } from "@builder.io/react";
++import { Builder } from "@builder.io/react";
+
+-  builder.registerComponent(
++  Builder.registerComponent(
+

@@ -1,4 +1,4 @@
-import { Builder, builder } from "@builder.io/react";
+import { Builder } from "@builder.io/react";
 import { BUILDER_API_KEY } from "../../lib/builder";
 import { SaintSalHero } from "./SaintSalHero";
 import { SaintSalFeatures } from "./SaintSalFeatures";
@@ -7,16 +7,19 @@ import { SaintSalStats } from "./SaintSalStats";
 import { SaintSalTestimonial } from "./SaintSalTestimonial";
 
 // Initialize Builder with API key
-builder.init(BUILDER_API_KEY);
+Builder.init(BUILDER_API_KEY);
 
 // Register SaintSal Hero Component
-builder.registerComponent(SaintSalHero, {
+Builder.registerComponent(SaintSalHero, {
   name: "SaintSal Hero",
   inputs: [
     {
       name: "title",
       type: "string",
       defaultValue: "Your AI Companion for Real Work",
+    },
+  ],
+});
       helperText:
         "Main hero title - last two words will be highlighted in gold",
     },

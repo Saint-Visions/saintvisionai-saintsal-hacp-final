@@ -1,0 +1,14 @@
+diff --git a/client/components/builder/builder-registry.ts b/client/components/builder/builder-registry.ts
+index e69de29..6d5ab8c 100644
+--- a/client/components/builder/builder-registry.ts
++++ b/client/components/builder/builder-registry.ts
+@@ -10,7 +10,7 @@
+ import { builder, Builder } from "@builder.io/react";
+ import { SaintSalHero } from "../ui/sections/Hero";
+ 
+-builder.registerComponent(SaintSalHero, {
++Builder.registerComponent(SaintSalHero, {
+   name: "SaintSalHero",
+   inputs: [],
+ });
+
