@@ -208,7 +208,7 @@ export default function Index() {
               .
             </h2>
 
-                        <div className="relative inline-block">
+            <div className="relative inline-block">
               <a href="https://saintvisionai.com/console">
                 <Button
                   className="text-xl px-12 py-6 font-semibold relative"
@@ -237,7 +237,7 @@ export default function Index() {
                 >
                   → Launch Assistant
                 </Button>
-              </Link>
+              </a>
             </div>
           </div>
         </section>
