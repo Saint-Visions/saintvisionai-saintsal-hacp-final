@@ -1,7 +1,8 @@
 import { builder } from "@builder.io/sdk-react";
 
 // SaintSal Builder.io Configuration
-export const BUILDER_API_KEY = "d83998c6a81f466db4fb83ab90c7ba25";
+export const BUILDER_API_KEY =
+  import.meta.env.VITE_PUBLIC_BUILDER_KEY || "d83998c6a81f466db4fb83ab90c7ba25";
 
 // Initialize Builder.io
 builder.init(BUILDER_API_KEY);
