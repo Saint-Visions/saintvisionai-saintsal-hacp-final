@@ -419,21 +419,26 @@ export default function Index() {
                   <div
                     className="w-10 h-10 mx-auto mb-3 rounded-xl flex items-center justify-center"
                     style={{
-                      background: "rgba(255,215,0,0.08)",
-                      border: "1px solid rgba(255,215,0,0.15)",
+                      background: `rgba(${item.glow},0.1)`,
+                      border: `1px solid rgba(${item.glow},0.2)`,
+                      boxShadow: `0 0 8px rgba(${item.glow},0.2)`,
                     }}
                   >
                     <item.icon
                       className="w-5 h-5"
-                      style={{ color: "#FFD700" }}
+                      style={{
+                        color: item.color,
+                        filter: `drop-shadow(0 0 4px rgba(${item.glow},0.4))`,
+                      }}
                     />
                   </div>
                   <p
                     className="text-sm"
                     style={{
                       fontFamily: "Inter, sans-serif",
-                      color: "rgba(255,255,255,0.8)",
-                      fontWeight: "300",
+                      color: item.color,
+                      fontWeight: "400",
+                      textShadow: `0 0 6px rgba(${item.glow},0.6), 0 0 12px rgba(${item.glow},0.3)`,
                     }}
                   >
                     {item.text}
