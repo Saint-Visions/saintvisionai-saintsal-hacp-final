@@ -27,7 +27,9 @@ import {
 
 export default function Dashboard() {
   return (
-    <div className="min-h-screen relative overflow-hidden charcoal-depth gold-particles">
+    <div className="min-h-screen relative overflow-hidden golden-workspace golden-dust-settle">
+      {/* Golden Atmosphere - Subtle for Dashboard */}
+      <GoldenAtmosphere intensity="subtle" />
       {/* Cinematic Professional Background */}
       <div
         className="absolute inset-0"
