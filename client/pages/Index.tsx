@@ -69,16 +69,16 @@ export default function Index() {
               fontWeight: "300",
             }}
           >
-            Built for{" "}
+            The AI assistant that actually{" "}
             <span
               style={{
                 color: "#FF6B6B",
                 fontWeight: "500",
               }}
             >
-              execution
-            </span>{" "}
-            — not entertainment.
+              gets things done
+            </span>
+            .
           </p>
 
           <p
@@ -89,7 +89,7 @@ export default function Index() {
               fontWeight: "300",
             }}
           >
-            Dual AI chat. Instant results. Full control.
+            Chat with AI. Take action instantly. Stay in control.
           </p>
 
           {/* Primary CTA */}
