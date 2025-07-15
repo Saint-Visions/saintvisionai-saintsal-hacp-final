@@ -6,16 +6,13 @@ import { Search, Users, BarChart3, Smartphone } from "lucide-react";
 export default function Index() {
   return (
     <div className="min-h-screen relative overflow-hidden">
-      {/* Professional Background Photo - Using the uploaded image */}
+      {/* Optimized Background with Single Overlay */}
       <div
         className="absolute inset-0 bg-cover bg-center"
         style={{
-          backgroundImage: `url('https://cdn.builder.io/api/v1/image/assets%2Fd83998c6a81f466db4fb83ab90c7ba25%2F903fb238899e411f81a3d696681c038e?format=webp&width=800')`,
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)), url('https://cdn.builder.io/api/v1/image/assets%2Fd83998c6a81f466db4fb83ab90c7ba25%2F903fb238899e411f81a3d696681c038e?format=webp&width=800')`,
         }}
       />
-
-      {/* Dark Overlay */}
-      <div className="absolute inset-0 bg-black/70" />
 
       {/* Content */}
       <div className="relative z-10 min-h-screen flex flex-col">
