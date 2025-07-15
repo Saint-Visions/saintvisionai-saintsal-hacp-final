@@ -16,6 +16,24 @@ export default function Index() {
         backgroundAttachment: "fixed",
       }}
     >
+      {/* Subtle Gold Dust Particles */}
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          backgroundImage: `
+            radial-gradient(2px 2px at 20px 30px, rgba(255,215,0,0.2), transparent),
+            radial-gradient(2px 2px at 40px 70px, rgba(255,215,0,0.15), transparent),
+            radial-gradient(1px 1px at 90px 40px, rgba(255,215,0,0.1), transparent),
+            radial-gradient(1px 1px at 130px 80px, rgba(255,215,0,0.2), transparent),
+            radial-gradient(2px 2px at 160px 30px, rgba(255,215,0,0.1), transparent)
+          `,
+          backgroundRepeat: "repeat",
+          backgroundSize: "200px 100px",
+          animation: "goldDustFloat 15s ease-in-out infinite",
+          opacity: 0.6,
+        }}
+      />
+
       {/* Content */}
       <div className="relative z-10 min-h-screen flex flex-col">
         {/* Main Content */}
