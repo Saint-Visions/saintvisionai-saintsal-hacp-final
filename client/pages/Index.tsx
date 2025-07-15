@@ -270,6 +270,8 @@ export default function Index() {
                       fontFamily: "Inter, sans-serif",
                       color: "#FFD700",
                       fontWeight: "600",
+                      textShadow:
+                        "0 0 8px rgba(255,215,0,0.7), 0 0 16px rgba(255,215,0,0.3)",
                     }}
                   >
                     {feature.title}
