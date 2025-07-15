@@ -97,7 +97,16 @@ export default function Index() {
                 </div>
                 <div className="text-sm text-yellow-400">Cookin Knowledge</div>
               </div>
-              <div className="text-4xl font-bold text-yellow-400">
+              <div
+                className="text-4xl font-bold"
+                style={{
+                  color: "#FFD700",
+                  fontFamily: "Cinzel Decorative, serif",
+                  textShadow:
+                    "0 0 20px rgba(255,215,0,0.6), 0 0 40px rgba(255,215,0,0.3)",
+                  fontSize: "42px",
+                }}
+              >
                 SaintVisionAI™
               </div>
 
