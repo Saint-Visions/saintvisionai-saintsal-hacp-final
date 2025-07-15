@@ -116,7 +116,7 @@ export class AIService {
     },
   ): Promise<ChatResponse> {
     try {
-      const response = await fetch("/api/chat/stream", {
+      const response = await fetch("/api/chat-stream", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
