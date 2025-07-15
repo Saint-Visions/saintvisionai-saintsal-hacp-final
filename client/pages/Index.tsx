@@ -107,9 +107,9 @@ export default function Index() {
             Built for{" "}
             <span
               style={{
-                color: "#FFD700",
+                color: "#FF6B6B",
                 textShadow:
-                  "0 0 12px rgba(255,215,0,0.8), 0 0 24px rgba(255,215,0,0.4)",
+                  "0 0 12px rgba(255,107,107,0.8), 0 0 24px rgba(255,107,107,0.4)",
               }}
             >
               execution
