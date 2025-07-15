@@ -1,12 +1,16 @@
-import { Builder } from "@builder.io/react";
+import { Builder, builder } from "@builder.io/react";
+import { BUILDER_API_KEY } from "../../lib/builder";
 import { SaintSalHero } from "./SaintSalHero";
 import { SaintSalFeatures } from "./SaintSalFeatures";
 import { SaintSalCTA } from "./SaintSalCTA";
 import { SaintSalStats } from "./SaintSalStats";
 import { SaintSalTestimonial } from "./SaintSalTestimonial";
 
+// Initialize Builder with API key
+builder.init(BUILDER_API_KEY);
+
 // Register SaintSal Hero Component
-Builder.registerComponent(SaintSalHero, {
+builder.registerComponent(SaintSalHero, {
   name: "SaintSal Hero",
   inputs: [
     {
@@ -72,7 +76,7 @@ Builder.registerComponent(SaintSalHero, {
 });
 
 // Register SaintSal Features Component
-Builder.registerComponent(SaintSalFeatures, {
+builder.registerComponent(SaintSalFeatures, {
   name: "SaintSal Features",
   inputs: [
     {
@@ -124,7 +128,7 @@ Builder.registerComponent(SaintSalFeatures, {
 });
 
 // Register SaintSal CTA Component
-Builder.registerComponent(SaintSalCTA, {
+builder.registerComponent(SaintSalCTA, {
   name: "SaintSal CTA",
   inputs: [
     {
@@ -161,7 +165,7 @@ Builder.registerComponent(SaintSalCTA, {
 });
 
 // Register SaintSal Stats Component
-Builder.registerComponent(SaintSalStats, {
+builder.registerComponent(SaintSalStats, {
   name: "SaintSal Stats",
   inputs: [
     {
@@ -217,7 +221,7 @@ Builder.registerComponent(SaintSalStats, {
 });
 
 // Register SaintSal Testimonial Component
-Builder.registerComponent(SaintSalTestimonial, {
+builder.registerComponent(SaintSalTestimonial, {
   name: "SaintSal Testimonials",
   inputs: [
     {
@@ -278,17 +282,8 @@ Builder.registerComponent(SaintSalTestimonial, {
   ],
 });
 
-// Define SaintSal Custom Models
-Builder.registerModel("page", {
-  kind: "page",
-});
-
-Builder.registerModel("section", {
-  kind: "section",
-});
-
 // SaintSal Design Tokens for Builder.io Editor
-Builder.register("editor.settings", {
+builder.register("editor.settings", {
   designTokens: {
     colors: [
       { name: "SaintSal Gold", value: "#FFD700" },
@@ -323,4 +318,4 @@ Builder.register("editor.settings", {
   },
 });
 
-export default Builder;
+export default builder;

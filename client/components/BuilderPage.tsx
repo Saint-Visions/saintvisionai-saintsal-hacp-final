@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { BuilderComponent, builder, useIsPreviewing } from "@builder.io/react";
 import { BUILDER_API_KEY } from "@/lib/builder";
+import { BuilderDebug } from "./BuilderDebug";
 
 // Import component registry to register all components
 import "./builder/builder-registry";
@@ -22,6 +23,7 @@ export default function BuilderPage({ model = "page" }: BuilderPageProps) {
 
       try {
         const urlPath = location.pathname;
+        console.log("🔍 Fetching Builder.io content for:", urlPath);
 
         const builderContent = await builder
           .get(model, {
@@ -32,9 +34,10 @@ export default function BuilderPage({ model = "page" }: BuilderPageProps) {
           })
           .toPromise();
 
+        console.log("✅ Builder.io content fetched:", builderContent);
         setContent(builderContent);
       } catch (error) {
-        console.error("Error fetching Builder.io content:", error);
+        console.error("❌ Error fetching Builder.io content:", error);
         setContent(null);
       } finally {
         setLoading(false);
@@ -77,6 +80,7 @@ export default function BuilderPage({ model = "page" }: BuilderPageProps) {
   if (content || isPreviewingInBuilder) {
     return (
       <div style={{ backgroundColor: "#10161C", minHeight: "100vh" }}>
+        <BuilderDebug />
         <BuilderComponent
           model={model}
           content={content}

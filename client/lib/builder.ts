@@ -1,11 +1,16 @@
-import { builder } from "@builder.io/sdk-react";
+import { builder } from "@builder.io/react";
 
 // SaintSal Builder.io Configuration
 export const BUILDER_API_KEY =
   import.meta.env.VITE_PUBLIC_BUILDER_KEY || "d83998c6a81f466db4fb83ab90c7ba25";
 
 // Initialize Builder.io
-builder.init(BUILDER_API_KEY);
+if (BUILDER_API_KEY) {
+  builder.init(BUILDER_API_KEY);
+  console.log("✅ Builder.io initialized with API key:", BUILDER_API_KEY);
+} else {
+  console.error("❌ Builder.io API key not found");
+}
 
 // Configure Builder.io settings for SaintSal
 builder.set("previewUrl", window.location.origin);

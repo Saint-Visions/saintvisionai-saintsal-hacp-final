@@ -7,6 +7,7 @@ import ProtectedRoute from "./components/ProtectedRoute";
 // Initialize Builder.io
 import { builder } from "@builder.io/react";
 import { BUILDER_API_KEY } from "./lib/builder";
+import "./lib/builder-verify";
 
 // Pages
 import Index from "./pages/Index";

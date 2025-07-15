@@ -2,8 +2,9 @@ import { useState, useEffect } from "react";
 import { BuilderComponent, builder, useIsPreviewing } from "@builder.io/react";
 import { Button } from "@/components/ui/button";
 import { BUILDER_API_KEY } from "@/lib/builder";
+import { BuilderDebug } from "@/components/BuilderDebug";
 
-// Import component registry
+// Import component registry to register all components
 import "../components/builder/builder-registry";
 
 export default function IndexWithBuilder() {
@@ -39,6 +40,7 @@ export default function IndexWithBuilder() {
   if (showBuilder || isPreviewingInBuilder) {
     return (
       <div style={{ backgroundColor: "#10161C", minHeight: "100vh" }}>
+        <BuilderDebug />
         <BuilderComponent
           model="page"
           content={builderContent}
@@ -61,6 +63,7 @@ export default function IndexWithBuilder() {
         backgroundAttachment: "fixed",
       }}
     >
+      <BuilderDebug />
       {/* Natural Environment Atmosphere */}
       <div
         className="absolute inset-0 pointer-events-none"
