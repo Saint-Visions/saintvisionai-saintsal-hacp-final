@@ -284,10 +284,9 @@ export default function Index() {
                     className="text-xl font-semibold mb-3"
                     style={{
                       fontFamily: "Inter, sans-serif",
-                      color: "#FFD700",
+                      color: feature.color,
                       fontWeight: "600",
-                      textShadow:
-                        "0 0 8px rgba(255,215,0,0.7), 0 0 16px rgba(255,215,0,0.3)",
+                      textShadow: `0 0 8px rgba(${feature.glow},0.8), 0 0 16px rgba(${feature.glow},0.4), 0 0 24px rgba(${feature.glow},0.2)`,
                     }}
                   >
                     {feature.title}
