@@ -277,7 +277,10 @@ export default function Console() {
                 Live
               </Badge>
             </div>
-            <div className="flex items-center space-x-2">
+            <div className="flex items-center space-x-3">
+              <Badge variant="outline" className="text-xs">
+                AI Model
+              </Badge>
               <select
                 value={activeModel}
                 onChange={(e) =>
@@ -289,12 +292,12 @@ export default function Console() {
                       | "dual",
                   )
                 }
-                className="bg-background border border-border rounded-md px-3 py-1 text-sm"
+                className="bg-card/80 border border-primary/20 rounded-lg px-4 py-2 text-sm text-foreground backdrop-blur-sm hover:border-primary/40 transition-colors"
               >
-                <option value="saintsal-4o">SaintSal™ 4o</option>
-                <option value="saintsal-turbo">SaintSal™ Turbo</option>
-                <option value="companion">{companionName} (Azure)</option>
-                <option value="dual">Dual AI</option>
+                <option value="saintsal-4o">🧠 SaintSal™ 4o</option>
+                <option value="saintsal-turbo">⚡ SaintSal™ Turbo</option>
+                <option value="companion">🤖 {companionName} (Azure)</option>
+                <option value="dual">🔥 Dual AI Mode</option>
               </select>
               {activeModel === "companion" && (
                 <Input
