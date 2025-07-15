@@ -6,6 +6,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { GoldenAtmosphere } from "@/components/GoldenAtmosphere";
+import { MicButton } from "@/components/MicButton";
 import {
   Brain,
   Send,
@@ -17,6 +18,7 @@ import {
   Settings,
   MoreVertical,
   User,
+  Upload,
 } from "lucide-react";
 import { useAuth } from "../contexts/AuthContext";
 import { conversationService, aiService } from "../lib/conversations";
@@ -78,20 +80,21 @@ export default function Console() {
     createConversation();
   }, [user, activeModel, currentConversationId]);
 
-  const handleSendMessage = async () => {
-    if (!input.trim() || isLoading || !currentConversationId) return;
+  const handleSendMessage = async (messageText?: string) => {
+    const textToSend = messageText || input;
+    if (!textToSend.trim() || isLoading || !currentConversationId) return;
 
     const userMessage: Message = {
       id: Date.now().toString(),
-      content: input,
+      content: textToSend,
       role: "user",
       model: activeModel,
       timestamp: new Date(),
     };
 
     setMessages((prev) => [...prev, userMessage]);
-    const messageContent = input;
-    setInput("");
+    const messageContent = textToSend;
+    if (!messageText) setInput(""); // Only clear input if not from voice
     setIsLoading(true);
 
     try {
@@ -398,10 +401,30 @@ export default function Console() {
                   disabled={isLoading}
                   className="flex-1"
                 />
+                <MicButton
+                  onTranscription={(text) => {
+                    setInput(text);
+                    // Auto-send voice messages for seamless experience
+                    setTimeout(() => handleSendMessage(text), 500);
+                  }}
+                  onError={(error) => console.error("Voice error:", error)}
+                  mode="both"
+                  disabled={isLoading}
+                  className="shrink-0"
+                />
                 <Button
-                  onClick={handleSendMessage}
+                  variant="outline"
+                  size="sm"
+                  disabled={isLoading}
+                  className="shrink-0"
+                >
+                  <Upload className="w-4 h-4" />
+                </Button>
+                <Button
+                  onClick={() => handleSendMessage()}
                   disabled={isLoading || !input.trim()}
                   size="sm"
+                  className="shrink-0"
                 >
                   <Send className="w-4 h-4" />
                 </Button>
@@ -409,10 +432,12 @@ export default function Console() {
               <div className="flex items-center justify-between mt-2 text-xs text-muted-foreground">
                 <span>
                   Powered by {getModelName(activeModel, companionName)} •
+                  <span className="text-primary">🎤 Voice Ready</span> •
                   Faith-aligned AI
                 </span>
                 <span>
-                  {messages.filter((m) => m.role === "user").length} messages
+                  {messages.filter((m) => m.role === "user").length} messages •
+                  <span className="text-green-400">🔴 Live</span>
                 </span>
               </div>
             </div>
