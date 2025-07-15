@@ -79,8 +79,26 @@ export default function Login() {
       className="min-h-screen relative overflow-hidden"
       style={{ backgroundColor: "#10161C" }}
     >
-      {/* Background effects */}
-      <div className="absolute inset-0 opacity-30">
+      {/* Subtle Gold Dust Particles - Facility Atmosphere */}
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          backgroundImage: `
+            radial-gradient(2px 2px at 20px 30px, rgba(255,215,0,0.1), transparent),
+            radial-gradient(1px 1px at 40px 70px, rgba(255,215,0,0.08), transparent),
+            radial-gradient(1px 1px at 90px 40px, rgba(255,215,0,0.06), transparent),
+            radial-gradient(2px 2px at 130px 80px, rgba(255,215,0,0.1), transparent),
+            radial-gradient(1px 1px at 160px 30px, rgba(255,215,0,0.05), transparent)
+          `,
+          backgroundRepeat: "repeat",
+          backgroundSize: "200px 100px",
+          animation: "goldDustFloat 20s ease-in-out infinite",
+          opacity: 0.3,
+        }}
+      />
+
+      {/* Facility Welcome Glow */}
+      <div className="absolute inset-0 opacity-20">
         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-amber-500/10 to-transparent animate-pulse"></div>
       </div>
 
