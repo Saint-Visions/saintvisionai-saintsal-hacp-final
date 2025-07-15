@@ -1,9 +1,10 @@
 import { Button } from "@/components/ui/button";
+import { GoldenAtmosphere } from "@/components/GoldenAtmosphere";
 
 export default function Index() {
   return (
     <div
-      className="min-h-screen relative overflow-hidden"
+      className="min-h-screen relative overflow-hidden golden-dust-settle"
       style={{
         backgroundColor: "#10161C",
         backgroundImage: `url('https://cdn.builder.io/api/v1/image/assets%2Fd83998c6a81f466db4fb83ab90c7ba25%2F179a1108a9c7482b829b68cf4cc7f89f')`,
@@ -13,6 +14,8 @@ export default function Index() {
         backgroundAttachment: "fixed",
       }}
     >
+      {/* Golden Atmosphere - Subtle Presence */}
+      <GoldenAtmosphere intensity="subtle" />
       {/* Natural Environment Atmosphere */}
       <div
         className="absolute inset-0 pointer-events-none"
