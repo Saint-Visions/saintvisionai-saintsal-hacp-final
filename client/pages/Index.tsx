@@ -113,7 +113,27 @@ export default function Index() {
               {/* Action Buttons */}
               <div className="space-y-3 pt-4">
                 <Link to="/signup" className="w-full">
-                  <Button className="w-full bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-3 rounded-xl text-lg">
+                  <Button
+                    className="w-full text-black font-bold py-3 text-lg"
+                    style={{
+                      background: "linear-gradient(90deg, #FFD700, #FFB400)",
+                      borderRadius: "12px",
+                      boxShadow:
+                        "0 0 20px rgba(255,215,0,0.4), 0 4px 15px rgba(0,0,0,0.3)",
+                      transition: "all 0.3s ease",
+                      fontFamily: "Inter, sans-serif",
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.transform = "scale(1.05)";
+                      e.currentTarget.style.boxShadow =
+                        "0 0 30px rgba(255,215,0,0.6), 0 6px 20px rgba(0,0,0,0.4)";
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.transform = "scale(1)";
+                      e.currentTarget.style.boxShadow =
+                        "0 0 20px rgba(255,215,0,0.4), 0 4px 15px rgba(0,0,0,0.3)";
+                    }}
+                  >
                     🔥 Start Cooking
                   </Button>
                 </Link>
