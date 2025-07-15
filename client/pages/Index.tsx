@@ -203,8 +203,8 @@ export default function Index() {
               </h2>
             </div>
 
-            {/* Glass Feature Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            {/* Clean Neon Feature Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mb-16">
               {[
                 {
                   icon: MessageSquare,
