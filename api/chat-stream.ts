@@ -6,12 +6,20 @@ let standardOpenAI: OpenAI;
 
 function getAzureOpenAI(): OpenAI {
   if (!azureOpenAI) {
+    const endpoint = process.env.AZURE_OPENAI_ENDPOINT;
+    const apiKey = process.env.AZURE_OPENAI_API_KEY;
+    const deploymentName = process.env.AZURE_OPENAI_DEPLOYMENT_NAME || "gpt-4o";
+
+    if (!endpoint || !apiKey) {
+      throw new Error("Azure OpenAI configuration missing");
+    }
+
     azureOpenAI = new OpenAI({
-      apiKey: process.env.AZURE_OPENAI_API_KEY,
-      baseURL: `${process.env.AZURE_OPENAI_ENDPOINT}openai/deployments/${process.env.AZURE_OPENAI_DEPLOYMENT_NAME}`,
+      apiKey: apiKey,
+      baseURL: `${endpoint}/openai/deployments/${deploymentName}`,
       defaultQuery: { "api-version": "2024-08-01-preview" },
       defaultHeaders: {
-        "api-key": process.env.AZURE_OPENAI_API_KEY,
+        "api-key": apiKey,
       },
     });
   }
